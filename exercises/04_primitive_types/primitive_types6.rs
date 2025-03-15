@@ -12,6 +12,6 @@ mod tests {
        // et assigne-le à une variable appelée `second`.
        // let second = ???;
 
-       assert_eq!(second, 2, "Ce n'est pas le 2ème nombre dans le tuple !");
+       assert_eq!(second, 2, "Ce n'est pas le 2ème nombre du tuple !");
    }
 }
