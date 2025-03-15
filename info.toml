@@ -37,85 +37,67 @@ name = "variables1"
 dir = "01_variables"
 test = false
 hint = """
-The declaration in the `main` function is missing a keyword that is needed
-in Rust to create a new variable binding."""
+Il manque le mot-clé `let` dans la déclaration de variable à l'intérieur de la fonction `main`."""
 
 [[exercises]]
 name = "variables2"
 dir = "01_variables"
 test = false
 hint = """
-The compiler message is saying that Rust can't infer the type that the
-variable binding `x` has with what is given here.
+Le message du compilateur indique que Rust ne peut pas déduire le type de la variable `x` avec ce qui est actuellement écrit.
 
-What happens if you annotate the first line in the `main` function with a type
-annotation?
+Que se passe-t-il si tu annotes la première ligne dans la fonction `main` avec un type?
 
-What if you give `x` a value?
+Que se passe-t-il si tu donnes une valeur à `x`?
 
-What if you do both?
+Que se passe-t-il si tu fais les deux?
 
-What type should `x` be, anyway?
+Quel type devrait avoir `x`, de toute façon?
 
-What if `x` is the same type as `10`? What if it's a different type?"""
+Et si `x` est du même type que `10`? Et s'il est d'un type différent?"""
 
 [[exercises]]
 name = "variables3"
 dir = "01_variables"
 test = false
 hint = """
-In this exercise, we have a variable binding that we've created in the `main`
-function, and we're trying to use it in the next line, but we haven't given it
-a value.
+Dans cet exercice, nous avons créé une variable dans la fonction `main`, et nous essayons de l'utiliser à la ligne suivante, mais nous ne lui avons pas donné de valeur.
 
-We can't print out something that isn't there; try giving `x` a value!
+Nous ne pouvons pas afficher quelque chose qui n'existe pas ; essaie de donner une valeur à `x` !
 
-This is an error that can cause bugs that's very easy to make in any
-programming language -- thankfully the Rust compiler has caught this for us!"""
+C'est une erreur qui peut causer des bugs et qui est très facile à faire dans n'importe quel langage de programmation — heureusement, le compilateur Rust l'a détectée pour nous !"""
 
 [[exercises]]
 name = "variables4"
 dir = "01_variables"
 test = false
 hint = """
-In Rust, variable bindings are immutable by default. But here, we're trying
-to reassign a different value to `x`! There's a keyword we can use to make
-a variable binding mutable instead."""
+En Rust, les variables sont immuables par défaut. Mais ici, nous essayons d'assigner une valeur différente à `x` ! Il existe un mot-clé que nous pouvons utiliser pour rendre une liaison de variable mutable."""
 
 [[exercises]]
 name = "variables5"
 dir = "01_variables"
 test = false
 hint = """
-In `variables4` we already learned how to make an immutable variable mutable
-using a special keyword. Unfortunately this doesn't help us much in this
-exercise because we want to assign a different typed value to an existing
-variable. Sometimes you may also like to reuse existing variable names because
-you are just converting values to different types like in this exercise.
-
-Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
-You can read more about 'Shadowing' in the book's section 'Variables and
-Mutability':
-https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
-
-Try to solve this exercise afterwards using this technique."""
+Dans `variables4`, nous avons déjà appris comment rendre une variable immuable mutable en utilisant un mot-clé spécial. Malheureusement, cela ne nous aide pas beaucoup dans cet exercice car nous voulons assigner une valeur de type différent à une variable existante. Parfois, tu peux aussi vouloir réutiliser des noms de variables existants parce que tu convertis simplement des valeurs vers différents types comme dans cet exercice.
+Heureusement, Rust a une solution puissante à ce problème : le 'Shadowing' (masquage) !
+Tu peux en savoir plus sur le 'Masquage' dans la section 'Les variables et la mutabilité' du Rust Book(fr) :
+https://jimskapt.github.io/rust-book-fr/ch03-01-variables-and-mutability.html#le-masquage
+Essaie de résoudre cet exercice en utilisant cette technique."""
 
 [[exercises]]
 name = "variables6"
 dir = "01_variables"
 test = false
 hint = """
-We know about variables and mutability, but there is another important type of
-variable available: constants.
+Nous connaissons les variables et la mutabilité, mais il existe un autre type important de variable disponible : les constantes.
 
-Constants are always immutable. They are declared with the keyword `const`
-instead of `let`.
+Les constantes sont toujours immuables. Elles sont déclarées avec le mot-clé `const` au lieu de `let`.
 
-The type of Constants must always be annotated.
+Le type des constantes doit toujours être annoté.
 
-Read more about constants and the differences between variables and constants
-under 'Constants' in the book's section 'Variables and Mutability':
-https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#constants"""
+Tu peux en savoir plus sur les constantes et les différences entre les variables et les constantes dans la section 'Les Constantes' du chapitre 'Les variables et la mutabilité' du Rust Book(fr) :
+https://jimskapt.github.io/rust-book-fr/ch03-01-variables-and-mutability.html#les-constantes"""
 
 # FUNCTIONS
 
