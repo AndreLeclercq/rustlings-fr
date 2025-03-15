@@ -1,4 +1,8 @@
+// Une fonction avec le nom `call_me` sans arguments ni valeur de retour.
+fn call_me() {
+    println!("Bonjour le monde !");
+}
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    call_me();
 }
