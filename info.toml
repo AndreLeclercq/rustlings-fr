@@ -22,3 +22,655 @@ skip_check_unsolved = true
 hint = """
 Tape `n` (pour 'next') afin de passer à l'exercice suivant.
 Tu pourrais avoir besoin d'appuyer sur ENTRÉE après avoir tapé `n`."""
+
+[[exercises]]
+name = "intro2"
+dir = "00_intro"
+test = false
+hint = """
+The compiler is informing us that we've got the name of the print macro wrong.
+It also suggests an alternative."""
+
+# VARIABLES
+
+[[exercises]]
+name = "variables1"
+dir = "01_variables"
+test = false
+hint = """
+The declaration in the `main` function is missing a keyword that is needed
+in Rust to create a new variable binding."""
+
+[[exercises]]
+name = "variables2"
+dir = "01_variables"
+test = false
+hint = """
+The compiler message is saying that Rust can't infer the type that the
+variable binding `x` has with what is given here.
+
+What happens if you annotate the first line in the `main` function with a type
+annotation?
+
+What if you give `x` a value?
+
+What if you do both?
+
+What type should `x` be, anyway?
+
+What if `x` is the same type as `10`? What if it's a different type?"""
+
+[[exercises]]
+name = "variables3"
+dir = "01_variables"
+test = false
+hint = """
+In this exercise, we have a variable binding that we've created in the `main`
+function, and we're trying to use it in the next line, but we haven't given it
+a value.
+
+We can't print out something that isn't there; try giving `x` a value!
+
+This is an error that can cause bugs that's very easy to make in any
+programming language -- thankfully the Rust compiler has caught this for us!"""
+
+[[exercises]]
+name = "variables4"
+dir = "01_variables"
+test = false
+hint = """
+In Rust, variable bindings are immutable by default. But here, we're trying
+to reassign a different value to `x`! There's a keyword we can use to make
+a variable binding mutable instead."""
+
+[[exercises]]
+name = "variables5"
+dir = "01_variables"
+test = false
+hint = """
+In `variables4` we already learned how to make an immutable variable mutable
+using a special keyword. Unfortunately this doesn't help us much in this
+exercise because we want to assign a different typed value to an existing
+variable. Sometimes you may also like to reuse existing variable names because
+you are just converting values to different types like in this exercise.
+
+Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
+You can read more about 'Shadowing' in the book's section 'Variables and
+Mutability':
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
+
+Try to solve this exercise afterwards using this technique."""
+
+[[exercises]]
+name = "variables6"
+dir = "01_variables"
+test = false
+hint = """
+We know about variables and mutability, but there is another important type of
+variable available: constants.
+
+Constants are always immutable. They are declared with the keyword `const`
+instead of `let`.
+
+The type of Constants must always be annotated.
+
+Read more about constants and the differences between variables and constants
+under 'Constants' in the book's section 'Variables and Mutability':
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#constants"""
+
+# FUNCTIONS
+
+[[exercises]]
+name = "functions1"
+dir = "02_functions"
+test = false
+hint = """
+This `main` function is calling a function that it expects to exist, but the
+function doesn't exist. It expects this function to have the name `call_me`.
+It also expects this function to not take any arguments and not return a value.
+Sounds a lot like `main`, doesn't it?"""
+
+[[exercises]]
+name = "functions2"
+dir = "02_functions"
+test = false
+hint = """
+Rust requires that all parts of a function's signature have type annotations,
+but `call_me` is missing the type annotation of `num`."""
+
+[[exercises]]
+name = "functions3"
+dir = "02_functions"
+test = false
+hint = """
+This time, the function *declaration* is okay, but there's something wrong
+with the place where we are calling the function."""
+
+[[exercises]]
+name = "functions4"
+dir = "02_functions"
+test = false
+hint = """
+The error message points to the function `sale_price` and says it expects a type
+after `->`. This is where the function's return type should be.
+Take a look at the `is_even` function for an example!"""
+
+[[exercises]]
+name = "functions5"
+dir = "02_functions"
+test = false
+hint = """
+This is a really common error that can be fixed by removing one character.
+It happens because Rust distinguishes between expressions and statements:
+Expressions return a value based on their operand(s), and statements simply
+return a `()` type which behaves just like `void` in C/C++.
+
+We want to return a value with the type `i32` from the `square` function, but
+it is returning the type `()`.
+
+There are two solutions:
+1. Add the `return` keyword before `num * num;`
+2. Remove the semicolon `;` after `num * num`"""
+
+# IF
+
+[[exercises]]
+name = "if1"
+dir = "03_if"
+hint = """
+It's possible to do this in one line if you would like!
+
+Some similar examples from other languages:
+- In C(++) this would be: `a > b ? a : b`
+- In Python this would be:  `a if a > b else b`
+
+Remember in Rust that:
+- The `if` condition does not need to be surrounded by parentheses
+- `if`/`else` conditionals are expressions
+- Each condition is followed by a `{}` block"""
+
+[[exercises]]
+name = "if2"
+dir = "03_if"
+hint = """
+For that first compiler error, it's important in Rust that each conditional
+block returns the same type!
+
+To get the tests passing, you will need a couple conditions checking different
+input values. Read the tests to find out what they expect."""
+
+[[exercises]]
+name = "if3"
+dir = "03_if"
+hint = """
+In Rust, every arm of an `if` expression has to return the same type of value.
+Make sure the type is consistent across all arms."""
+
+# QUIZ 1
+
+[[exercises]]
+name = "quiz1"
+dir = "quizzes"
+hint = "No hints this time ;)"
+
+# PRIMITIVE TYPES
+
+[[exercises]]
+name = "primitive_types1"
+dir = "04_primitive_types"
+test = false
+hint = """
+In Rust, a boolean can be negated using the operator `!` before it.
+Example: `!true == false`
+This also works with boolean variables."""
+
+[[exercises]]
+name = "primitive_types2"
+dir = "04_primitive_types"
+test = false
+hint = "No hints this time ;)"
+
+[[exercises]]
+name = "primitive_types3"
+dir = "04_primitive_types"
+test = false
+hint = """
+There's a shorthand to initialize arrays with a certain size that doesn't
+require you to type in 100 items (but you certainly can if you want!).
+
+For example, you can do:
+```
+let array = ["Are we there yet?"; 100];
+```
+
+Bonus: what are some other things you could have that would return `true`
+for `a.len() >= 100`?"""
+
+[[exercises]]
+name = "primitive_types4"
+dir = "04_primitive_types"
+hint = """
+Take a look at the 'Understanding Ownership -> Slices -> Other Slices' section
+of the book: https://doc.rust-lang.org/book/ch04-03-slices.html and use the
+starting and ending (plus one) indices of the items in the array that you want
+to end up in the slice.
+
+If you're curious why the first argument of `assert_eq!` does not have an
+ampersand for a reference since the second argument is a reference, take a look
+at the coercion chapter of the nomicon:
+https://doc.rust-lang.org/nomicon/coercions.html"""
+
+[[exercises]]
+name = "primitive_types5"
+dir = "04_primitive_types"
+test = false
+hint = """
+Take a look at the 'Data Types -> The Tuple Type' section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Particularly the part about destructuring (second to last example in the
+section).
+
+You'll need to make a pattern to bind `name` and `age` to the appropriate parts
+of the tuple."""
+
+[[exercises]]
+name = "primitive_types6"
+dir = "04_primitive_types"
+hint = """
+While you could use a destructuring `let` for the tuple here, try
+indexing into it instead, as explained in the last example of the
+'Data Types -> The Tuple Type' section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Now, you have another tool in your toolbox!"""
+
+# VECS
+
+[[exercises]]
+name = "vecs1"
+dir = "05_vecs"
+hint = """
+In Rust, there are two ways to define a Vector.
+1. One way is to use the `Vec::new()` function to create a new vector
+   and fill it with the `push()` method.
+2. The second way is to use the `vec![]` macro and define your elements
+   inside the square brackets. This way is simpler when you exactly know
+   the initial values.
+
+Check this chapter: https://doc.rust-lang.org/book/ch08-01-vectors.html
+of the Rust book to learn more."""
+
+[[exercises]]
+name = "vecs2"
+dir = "05_vecs"
+hint = """
+In the first function, we create an empty vector and want to push new elements
+to it.
+
+In the second function, we map the values of the input and collect them into
+a vector.
+
+After you've completed both functions, decide for yourself which approach you
+like better.
+
+What do you think is the more commonly used pattern under Rust developers?"""
+
+# MOVE SEMANTICS
+
+[[exercises]]
+name = "move_semantics1"
+dir = "06_move_semantics"
+hint = """
+So you've got the "cannot borrow `vec` as mutable, as it is not declared as
+mutable" error on the line where we push an element to the vector, right?
+
+The fix for this is going to be adding one keyword, and the addition is NOT on
+the line where we push to the vector (where the error is).
+
+Try accessing `vec0` after having called `fill_vec()`. See what happens!"""
+
+[[exercises]]
+name = "move_semantics2"
+dir = "06_move_semantics"
+hint = """
+When running this exercise for the first time, you'll notice an error about
+"borrow of moved value". In Rust, when an argument is passed to a function and
+it's not explicitly returned, you can't use the original variable anymore.
+We call this "moving" a variable. When we pass `vec0` into `fill_vec`, it's
+being "moved" into `vec1`, meaning we can't access `vec0` anymore.
+
+You could make another, separate version of the data that's in `vec0` and
+pass it to `fill_vec` instead. This is called cloning in Rust."""
+
+[[exercises]]
+name = "move_semantics3"
+dir = "06_move_semantics"
+hint = """
+The difference between this one and the previous ones is that the first line
+of `fn fill_vec` that had `let mut vec = vec;` is no longer there. You can,
+instead of adding that line back, add `mut` in one place that will change
+an existing binding to be a mutable binding instead of an immutable one :)"""
+
+[[exercises]]
+name = "move_semantics4"
+dir = "06_move_semantics"
+hint = """
+Carefully reason about the range in which each mutable reference is in
+scope. Does it help to update the value of `x` immediately after
+the mutable reference is taken?
+Read more about 'Mutable References' in the book's section 'References and
+Borrowing':
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references."""
+
+[[exercises]]
+name = "move_semantics5"
+dir = "06_move_semantics"
+test = false
+hint = """
+To find the answer, you can consult the book section "References and Borrowing":
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+
+The first problem is that `get_char` is taking ownership of the string. So
+`data` is moved and can't be used for `string_uppercase`. `data` is moved to
+`get_char` first, meaning that `string_uppercase` can't manipulate the data.
+
+Once you've fixed that, `string_uppercase`'s function signature will also need
+to be adjusted."""
+
+# STRUCTS
+
+[[exercises]]
+name = "structs1"
+dir = "07_structs"
+hint = """
+Rust has more than one type of struct. Three actually, all variants are used to
+package related data together.
+
+There are regular structs. These are named collections of related data stored in
+fields.
+
+Tuple structs are basically just named tuples.
+
+Finally, unit structs. These don't have any fields and are useful for generics.
+
+In this exercise, you need to complete and implement one of each kind.
+Read more about structs in The Book:
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html"""
+
+[[exercises]]
+name = "structs2"
+dir = "07_structs"
+hint = """
+Creating instances of structs is easy, all you need to do is assign some values
+to its fields.
+
+There are however some shortcuts that can be taken when instantiating structs.
+Have a look in The Book to find out more:
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"""
+
+[[exercises]]
+name = "structs3"
+dir = "07_structs"
+hint = """
+For `is_international`: What makes a package international? Seems related to
+the places it goes through right?
+
+For `get_fees`: This method takes an additional argument, is there a field in
+the `Package` struct that this relates to?
+
+Have a look in The Book to find out more about method implementations:
+https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
+
+# ENUMS
+
+[[exercises]]
+name = "enums1"
+dir = "08_enums"
+test = false
+hint = "No hints this time ;)"
+
+[[exercises]]
+name = "enums2"
+dir = "08_enums"
+test = false
+hint = """
+You can create enumerations that have different variants with different types
+such as anonymous structs, structs, a single string, tuples, no data, etc."""
+
+[[exercises]]
+name = "enums3"
+dir = "08_enums"
+hint = """
+As a first step, define enums to compile the code without errors.
+
+Then, create a match expression in `process()`.
+
+Note that you need to deconstruct some message variants in the match expression
+to get the variant's values."""
+
+# STRINGS
+
+[[exercises]]
+name = "strings1"
+dir = "09_strings"
+test = false
+hint = """
+The `current_favorite_color` function is currently returning a string slice
+with the `'static` lifetime. We know this because the data of the string lives
+in our code itself -- it doesn't come from a file or user input or another
+program -- so it will live as long as our program lives.
+
+But it is still a string slice. There's one way to create a `String` by
+converting a string slice covered in the Strings chapter of the book, and
+another way that uses the `From` trait."""
+
+[[exercises]]
+name = "strings2"
+dir = "09_strings"
+test = false
+hint = """
+Yes, it would be really easy to fix this by just changing the value bound to
+`word` to be a string slice instead of a `String`, wouldn't it? There is a way
+to add one character to the `if` statement, though, that will coerce the
+`String` into a string slice.
+
+Side note: If you're interested in learning about how this kind of reference
+conversion works, you can jump ahead in the book and read this part in the
+smart pointers chapter:
+https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods"""
+
+[[exercises]]
+name = "strings3"
+dir = "09_strings"
+hint = """
+There are many useful standard library functions for strings. Let's try and use
+some of them:
+https://doc.rust-lang.org/std/string/struct.String.html#method.trim
+
+For the `compose_me` method: You can either use the `format!` macro, or convert
+the string slice into an owned string, which you can then freely extend.
+
+For the `replace_me` method, you can check out the `replace` method:
+https://doc.rust-lang.org/std/string/struct.String.html#method.replace"""
+
+[[exercises]]
+name = "strings4"
+dir = "09_strings"
+test = false
+hint = """
+Replace `placeholder` with either `string` or `string_slice` in the `main`
+function.
+
+Example:
+`placeholder("blue");`
+should become
+`string_slice("blue");`
+because "blue" is `&str`, not `String`."""
+
+# MODULES
+
+[[exercises]]
+name = "modules1"
+dir = "10_modules"
+test = false
+hint = """
+Everything is private in Rust by default. But there's a keyword we can use
+to make something public!"""
+
+[[exercises]]
+name = "modules2"
+dir = "10_modules"
+test = false
+hint = """
+The `delicious_snacks` module is trying to present an external interface that
+is different than its internal structure (the `fruits` and `veggies` modules
+and associated constants). Complete the `use` statements to fit the uses in
+`main` and find the one keyword missing for both constants.
+
+Learn more in The Book:
+https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use"""
+
+[[exercises]]
+name = "modules3"
+dir = "10_modules"
+test = false
+hint = """
+`UNIX_EPOCH` and `SystemTime` are declared in the `std::time` module. Add a
+`use` statement for these two to bring them into scope. You can use nested
+paths to bring these two in using only one line."""
+
+# HASHMAPS
+
+[[exercises]]
+name = "hashmaps1"
+dir = "11_hashmaps"
+hint = """
+The number of fruits should be at least 5 and you have to put at least 3
+different types of fruits."""
+
+[[exercises]]
+name = "hashmaps2"
+dir = "11_hashmaps"
+hint = """
+Use the `entry()` and `or_insert()` methods of `HashMap` to achieve this.
+
+Learn more in The Book:
+https://doc.rust-lang.org/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value"""
+
+[[exercises]]
+name = "hashmaps3"
+dir = "11_hashmaps"
+hint = """
+Hint 1: Use the `entry()` and `or_default()` methods of `HashMap` to insert the
+        default value of `TeamScores` if a team doesn't exist in the table yet.
+
+Hint 2: If there is already an entry for a given key, the value returned by
+        `entry()` can be updated based on the existing value.
+
+Learn more in The Book:
+https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value"""
+
+# QUIZ 2
+
+[[exercises]]
+name = "quiz2"
+dir = "quizzes"
+hint = "The `+` operator can concatenate a `String` with a `&str`."
+
+# OPTIONS
+
+[[exercises]]
+name = "options1"
+dir = "12_options"
+hint = """
+Options can have a `Some` value, with an inner value, or a `None` value,
+without an inner value.
+
+There are multiple ways to get at the inner value, you can use `unwrap`, or
+pattern match. Unwrapping is the easiest, but how do you do it safely so that
+it doesn't panic in your face later?"""
+
+[[exercises]]
+name = "options2"
+dir = "12_options"
+hint = """
+Check out:
+
+- https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
+- https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
+
+Remember that `Option`s can be nested in if-let and while-let statements.
+
+For example: `if let Some(Some(x)) = y`
+
+Also see `Option::flatten`"""
+
+[[exercises]]
+name = "options3"
+dir = "12_options"
+test = false
+hint = """
+The compiler says a partial move happened in the `match` statement. How can
+this be avoided? The compiler shows the correction needed.
+
+After making the correction as suggested by the compiler, read the related docs
+page:
+https://doc.rust-lang.org/std/keyword.ref.html"""
+
+# ERROR HANDLING
+
+[[exercises]]
+name = "errors1"
+dir = "13_error_handling"
+hint = """
+`Ok` and `Err` are the two variants of `Result`, so what the tests are saying
+is that `generate_nametag_text` should return a `Result` instead of an `Option`.
+
+To make this change, you'll need to:
+  - update the return type in the function signature to be a `Result<String,
+    String>` that could be the variants `Ok(String)` and `Err(String)`
+  - change the body of the function to return `Ok(…)` where it currently
+    returns `Some(…)`
+  - change the body of the function to return `Err(error message)` where it
+    currently returns `None`"""
+
+[[exercises]]
+name = "errors2"
+dir = "13_error_handling"
+hint = """
+One way to handle this is using a `match` statement on
+`item_quantity.parse::<i32>()` where the cases are `Ok(something)` and
+`Err(something)`.
+
+This pattern is very common in Rust, though, so there's the `?` operator that
+does pretty much what you would make that match statement do for you!
+
+Take a look at this section of the "Error Handling" chapter:
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator"""
+
+[[exercises]]
+name = "errors3"
+dir = "13_error_handling"
+test = false
+hint = """
+If other functions can return a `Result`, why shouldn't `main`? It's a fairly
+common convention to return something like `Result<(), ErrorType>` from your
+`main` function.
+
+The unit type `()` is there because nothing is really needed in terms of a
+positive result."""
+
+[[exercises]]
+name = "errors4"
+dir = "13_error_handling"
+hint = """
+`PositiveNonzeroInteger::new` is always creating a new instance and returning
+an `Ok` result. But it should be doing some checking, returning an `Err` if
+those checks fail, and only returning an `Ok` if those checks determine that
+everything is… okay :)"""
+
+[[exercises]]
+name = "errors5"
+dir = "13_error_handling"
+test = false
+hint = """
+There are two different 
