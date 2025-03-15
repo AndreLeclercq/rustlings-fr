@@ -181,7 +181,7 @@ Assure-toi que le type soit cohérent dans toutes les *branches*."""
 [[exercises]]
 name = "quiz1"
 dir = "quizzes"
-hint = "No hints this time ;)"
+hint = "Pas d'indices cette fois-ci ;)"
 
 # PRIMITIVE TYPES
 
@@ -190,44 +190,41 @@ name = "primitive_types1"
 dir = "04_primitive_types"
 test = false
 hint = """
-In Rust, a boolean can be negated using the operator `!` before it.
-Example: `!true == false`
-This also works with boolean variables."""
+En Rust, une valeur booléenne peut être inversée en utilisant l'opérateur `!` placé devant.
+Exemple : `!true == false`
+Cela fonctionne également avec les variables booléennes."""
 
 [[exercises]]
 name = "primitive_types2"
 dir = "04_primitive_types"
 test = false
-hint = "No hints this time ;)"
+hint = "Pas d'indices cette fois-ci ;)"
 
 [[exercises]]
 name = "primitive_types3"
 dir = "04_primitive_types"
 test = false
 hint = """
-There's a shorthand to initialize arrays with a certain size that doesn't
-require you to type in 100 items (but you certainly can if you want!).
-
-For example, you can do:
+Il existe un raccourci pour initialiser des tableaux d'une certaine taille qui ne
+te demande pas de saisir 100 éléments (mais tu peux certainement le faire si tu le souhaites !).
+Par exemple, tu peux faire :
 ```
-let array = ["Are we there yet?"; 100];
+let array = ["On arrive bientôt ?"; 100];
 ```
-
-Bonus: what are some other things you could have that would return `true`
-for `a.len() >= 100`?"""
+Bonus : quelles autres choses pourrais-tu avoir qui retourneraient `true`
+pour `a.len() >= 100` ?"""
 
 [[exercises]]
 name = "primitive_types4"
 dir = "04_primitive_types"
 hint = """
-Take a look at the 'Understanding Ownership -> Slices -> Other Slices' section
-of the book: https://doc.rust-lang.org/book/ch04-03-slices.html and use the
-starting and ending (plus one) indices of the items in the array that you want
-to end up in the slice.
-
-If you're curious why the first argument of `assert_eq!` does not have an
-ampersand for a reference since the second argument is a reference, take a look
-at the coercion chapter of the nomicon:
+Regarde la section 'Comprendre la propriété -> Slices -> Autres Slices' 
+du rust book (fr) : https://jimskapt.github.io/rust-book-fr/ch04-03-slices.html et utilise les
+indices de début et de fin (plus un) des éléments du tableau que tu souhaites
+avoir dans la slice.
+Si tu te demandes pourquoi le premier argument de `assert_eq!` n'a pas
+d'esperluette pour une référence alors que le second argument est une référence, jette un œil
+au chapitre sur la coercition du nomicon :
 https://doc.rust-lang.org/nomicon/coercions.html"""
 
 [[exercises]]
@@ -235,23 +232,20 @@ name = "primitive_types5"
 dir = "04_primitive_types"
 test = false
 hint = """
-Take a look at the 'Data Types -> The Tuple Type' section of the book:
-https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
-Particularly the part about destructuring (second to last example in the
-section).
-
-You'll need to make a pattern to bind `name` and `age` to the appropriate parts
-of the tuple."""
+Regarde la section 'Types de données -> Le type Tuple' du rust book (fr) :
+https://jimskapt.github.io/rust-book-fr/ch03-02-data-types.html#le-type-tuple
+Particulièrement la partie sur la destructuration (avant-dernier exemple dans la section).
+Tu auras besoin de créer un pattern pour lier `name` et `age` aux parties appropriées du tuple."""
 
 [[exercises]]
 name = "primitive_types6"
 dir = "04_primitive_types"
 hint = """
-While you could use a destructuring `let` for the tuple here, try
-indexing into it instead, as explained in the last example of the
-'Data Types -> The Tuple Type' section of the book:
-https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
-Now, you have another tool in your toolbox!"""
+Bien que tu pourrais utiliser un `let` avec destructuration pour le tuple ici, essaie plutôt 
+d'y accéder par indexation, comme expliqué dans le dernier exemple de la
+section 'Types de données -> Le type Tuple' du rust book (fr) :
+https://jimskapt.github.io/rust-book-fr/ch03-02-data-types.html#le-type-tuple
+Maintenant, tu as une nouvelle corde à ton arc !"""
 
 # VECS
 
