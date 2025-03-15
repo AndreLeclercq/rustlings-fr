@@ -28,8 +28,7 @@ name = "intro2"
 dir = "00_intro"
 test = false
 hint = """
-The compiler is informing us that we've got the name of the print macro wrong.
-It also suggests an alternative."""
+Le compilateur nous informe que nous avons mal écrit le nom de la macro d'affichage (print macro). Il suggère une alternative."""
 
 # VARIABLES
 
