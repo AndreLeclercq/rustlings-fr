@@ -1,8 +1,8 @@
 fn main() {
-    let cat = ("Furry McFurson", 3.5);
+   let cat = ("Furry McFurson", 3.5);
 
-    // TODO: Destructure the `cat` tuple in one statement so that the println works.
-    // let /* your pattern here */ = cat;
+   // TODO: Déstructure le tuple `cat` en une seule instruction pour que le println fonctionne.
+   // let /* ton pattern ici */ = cat;
 
-    println!("{name} is {age} years old");
+   println!("{name} a {age} ans");
 }
