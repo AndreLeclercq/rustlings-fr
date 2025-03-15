@@ -1,4 +1,4 @@
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    // N'ÉDITE PAS CE FICHIER !
+    // Il sera automatiquement rempli après avoir terminé l'exercice.
 }
