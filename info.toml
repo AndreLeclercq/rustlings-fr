@@ -253,30 +253,24 @@ Maintenant, tu as une nouvelle corde à ton arc !"""
 name = "vecs1"
 dir = "05_vecs"
 hint = """
-In Rust, there are two ways to define a Vector.
-1. One way is to use the `Vec::new()` function to create a new vector
-   and fill it with the `push()` method.
-2. The second way is to use the `vec![]` macro and define your elements
-   inside the square brackets. This way is simpler when you exactly know
-   the initial values.
-
-Check this chapter: https://doc.rust-lang.org/book/ch08-01-vectors.html
-of the Rust book to learn more."""
+En Rust, il existe deux façons de définir un Vector (vecteur).
+1. Une façon est d'utiliser la fonction `Vec::new()` pour créer un nouveau vecteur
+   et le remplir avec la méthode `push()`.
+2. La seconde façon est d'utiliser la macro `vec![]` et définir tes éléments
+   à l'intérieur des crochets. Cette façon est plus simple quand tu connais exactement
+   les valeurs initiales.
+Consulte ce chapitre : https://jimskapt.github.io/rust-book-fr/ch08-01-vectors.html
+du Rust book pour en savoir plus."""
 
 [[exercises]]
 name = "vecs2"
 dir = "05_vecs"
 hint = """
-In the first function, we create an empty vector and want to push new elements
-to it.
+Dans la première fonction, nous créons un vecteur vide et voulons y ajouter de nouveaux éléments.
+Dans la deuxième fonction, nous mappons les valeurs de l'entrée et les collectons dans un vecteur.
 
-In the second function, we map the values of the input and collect them into
-a vector.
-
-After you've completed both functions, decide for yourself which approach you
-like better.
-
-What do you think is the more commonly used pattern under Rust developers?"""
+Après avoir complété les deux fonctions, décide par toi-même quelle approche tu préfères.
+Selon toi, quel est le modèle le plus couramment utilisé par les développeurs Rust ?"""
 
 # MOVE SEMANTICS
 
