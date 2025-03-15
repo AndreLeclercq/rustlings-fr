@@ -1,4 +1,4 @@
-// TODO: Change the line below to fix the compiler error.
+// TODO: Change la ligne ci-dessous pour corriger l'erreur du compilateur.
 const NUMBER = 3;
 
 fn main() {
