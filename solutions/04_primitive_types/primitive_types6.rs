@@ -1,4 +1,16 @@
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+   // Tu peux expérimenter ici si tu le souhaites.
+}
+
+#[cfg(test)]
+mod tests {
+   #[test]
+   fn indexing_tuple() {
+       let numbers = (1, 2, 3);
+
+       // Syntaxe d'indexation (indexing) du tuple.
+       let second = numbers.1;
+
+       assert_eq!(second, 2, "Ce n'est pas le 2ème nombre du tuple !");
+   }
 }
