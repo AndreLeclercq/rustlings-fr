@@ -1,8 +1,8 @@
 fn main() {
-    let number = "T-H-R-E-E"; // Don't change this line
-    println!("Spell a number: {}", number);
+   let number = "T-R-O-I-S"; // Ne change pas cette ligne
+   println!("Épelle un nombre: {}", number);
 
-    // TODO: Fix the compiler error by changing the line below without renaming the variable.
-    number = 3;
-    println!("Number plus two is: {}", number + 2);
+   // TODO: Corrige l'erreur du compilateur en changeant la ligne ci-dessous sans renommer la variable.
+   number = 3;
+   println!("Le nombre plus deux égale: {}", number + 2);
 }

@@ -1,10 +1,10 @@
 fn main() {
-    // TODO: Change the line below to fix the compiler error.
+    // TODO: Change la ligne ci-dessous pour corriger l'erreur du compilateur.
     let x;
 
     if x == 10 {
-        println!("x is ten!");
+        println!("x vaut dix !");
     } else {
-        println!("x is not ten!");
+        println!("x ne vaut pas dix !");
     }
 }
