@@ -1,4 +1,6 @@
+// Le type des constantes doit toujours être annoté.
+const NUMBER: u64 = 3;
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+   println!("Nombre : {NUMBER}");
 }

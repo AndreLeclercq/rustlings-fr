@@ -1,4 +1,6 @@
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    // Déclarer des variables nécessite le mot-clé `let`.
+    let x = 5;
+
+    println!("x a la valeur {x}");
 }
