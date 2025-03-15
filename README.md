@@ -4,9 +4,8 @@
 
 </div>
 
-> ⚠️ Attention : Ce projet est actuellement en cours de traduction et n'est pas encore prêt pour une utilisation quotidienne. Je déconseille vivement de l'utiliser en l'état actuel. ⚠️
-
 > Ceci est la version française du projet [Rustlings 🇬🇧](https://github.com/rust-lang/rustlings). Les exercices ont été traduits pour faciliter l'apprentissage de Rust pour les francophones.
+> ⚠️ Attention : Ce projet est actuellement en cours de traduction et n'est pas encore prêt pour une utilisation quotidienne. Je déconseille vivement de l'utiliser en l'état actuel. ⚠️
 
 Salut et bienvenue dans Rustlings.
 Ce projet contient de petits exercices pour t'habituer à lire et écrire du code Rust.
@@ -53,10 +52,17 @@ cargo install rustlings
 
 ### Initialisation
 
-Après avoir installé Rustlings, exécute la commande suivante pour initialiser le répertoire `rustlings/` :
+Après avoir installé Rustlings, clone ce dépôt pour obtenir la version française des exercices :
 
 ```bash
-rustlings init
+git clone https://github.com/andreleclercq/rustlings-fr.git
+```
+
+Maintenant, va dans le répertoire nouvellement initialisé et lance Rustlings pour obtenir plus d'instructions sur comment commencer les exercices :
+
+```bash
+cd rustlings/
+rustlings
 ```
 
 <details>
@@ -73,13 +79,6 @@ La solution est de...
 - soit désinstaller Rust du gestionnaire de paquets et l'installer en utilisant la méthode officielle avec `rustup` : [www.rust-lang.org/fr/tools/install 🇫🇷](https://www.rust-lang.org/fr/tools/install)
 
 </details>
-
-Maintenant, va dans le répertoire nouvellement initialisé et lance Rustlings pour obtenir plus d'instructions sur comment commencer les exercices :
-
-```bash
-cd rustlings/
-rustlings
-```
 
 ## Environnement de travail
 
