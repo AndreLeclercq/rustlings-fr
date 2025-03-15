@@ -1,9 +1,7 @@
-# Primitive Types
+# Types Primitifs
+Rust possède quelques types basiques qui sont directement implémentés dans le 
+compilateur. Dans cette section, nous allons examiner les plus importants.
 
-Rust has a couple of basic types that are directly implemented into the
-compiler. In this section, we'll go through the most important ones.
-
-## Further information
-
-- [Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html)
-- [The Slice Type](https://doc.rust-lang.org/book/ch04-03-slices.html)
+## Informations complémentaires
+- [Types de données](https://jimskapt.github.io/rust-book-fr/ch03-02-data-types.html)
+- [Le type Slice](https://jimskapt.github.io/rust-book-fr/ch04-03-slices.html)

@@ -1,11 +1,11 @@
 fn main() {
-    // TODO: Create an array called `a` with at least 100 elements in it.
-    // let a = ???
+   // TODO: Crée un tableau appelé `a` avec au moins 100 éléments.
+   // let a = ???
 
-    if a.len() >= 100 {
-        println!("Wow, that's a big array!");
-    } else {
-        println!("Meh, I eat arrays like that for breakfast.");
-        panic!("Array not big enough, more elements needed");
-    }
+   if a.len() >= 100 {
+       println!("Wow, c'est un grand tableau !");
+   } else {
+       println!("Bah, je mange des tableaux comme ça au petit-déjeuner.");
+       panic!("Tableau pas assez grand, plus d'éléments nécessaires");
+   }
 }

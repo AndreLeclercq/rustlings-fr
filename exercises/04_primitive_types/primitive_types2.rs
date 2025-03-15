@@ -1,28 +1,28 @@
 // Characters (`char`)
 
 fn main() {
-    // Note the _single_ quotes, these are different from the double quotes
-    // you've been seeing around.
-    let my_first_initial = 'C';
-    if my_first_initial.is_alphabetic() {
-        println!("Alphabetical!");
-    } else if my_first_initial.is_numeric() {
-        println!("Numerical!");
-    } else {
-        println!("Neither alphabetic nor numeric!");
-    }
+   // Note les guillemets _simples_, ils sont différents des guillemets doubles
+   // que tu as vus jusqu'à présent.
+   let my_first_initial = 'C';
+   if my_first_initial.is_alphabetic() {
+       println!("Alphabétique !");
+   } else if my_first_initial.is_numeric() {
+       println!("Numérique !");
+   } else {
+       println!("Ni alphabétique ni numérique !");
+   }
 
-    // TODO: Analogous to the example before, declare a variable called `your_character`
-    // below with your favorite character.
-    // Try a letter, try a digit (in single quotes), try a special character, try a character
-    // from a different language than your own, try an emoji 😉
-    // let your_character = '';
+   // TODO: De façon analogue à l'exemple précédent, déclare une variable appelée `your_character`
+   // ci-dessous avec ton caractère préféré.
+   // Essaie une lettre, essaie un chiffre (entre guillemets simples), essaie un caractère spécial, essaie un caractère
+   // d'une langue différente de la tienne, essaie un emoji 😉
+   // let your_character = '';
 
-    if your_character.is_alphabetic() {
-        println!("Alphabetical!");
-    } else if your_character.is_numeric() {
-        println!("Numerical!");
-    } else {
-        println!("Neither alphabetic nor numeric!");
-    }
+   if your_character.is_alphabetic() {
+       println!("Alphabétique !");
+   } else if your_character.is_numeric() {
+       println!("Numérique !");
+   } else {
+       println!("Ni alphabétique ni numérique !");
+   }
 }
