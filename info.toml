@@ -278,61 +278,61 @@ Selon toi, quel est le modèle le plus couramment utilisé par les développeurs
 name = "move_semantics1"
 dir = "06_move_semantics"
 hint = """
-So you've got the "cannot borrow `vec` as mutable, as it is not declared as
-mutable" error on the line where we push an element to the vector, right?
+Donc tu as l'erreur "cannot borrow `vec` as mutable, as it is not declared as
+mutable" (impossible d'emprunter `vec` comme mutable, car il n'est pas déclaré comme
+mutable) sur la ligne où nous ajoutons un élément au vecteur, n'est-ce pas ?
 
-The fix for this is going to be adding one keyword, and the addition is NOT on
-the line where we push to the vector (where the error is).
+La solution consiste à ajouter un seul mot-clé, et ce n'est PAS sur
+la ligne où nous faisons un ajout au vecteur (où se trouve l'erreur).
 
-Try accessing `vec0` after having called `fill_vec()`. See what happens!"""
+Essaie d'accéder à `vec0` après avoir appelé `fill_vec()`. Regarde ce qui se passe !"""
 
 [[exercises]]
 name = "move_semantics2"
 dir = "06_move_semantics"
 hint = """
-When running this exercise for the first time, you'll notice an error about
-"borrow of moved value". In Rust, when an argument is passed to a function and
-it's not explicitly returned, you can't use the original variable anymore.
-We call this "moving" a variable. When we pass `vec0` into `fill_vec`, it's
-being "moved" into `vec1`, meaning we can't access `vec0` anymore.
+Quand tu exécutes cet exercice pour la première fois, tu remarqueras une erreur concernant
+"borrow of moved value" (emprunt d'une valeur déplacée). En Rust, quand un argument est passé à une fonction et
+qu'il n'est pas explicitement retourné, tu ne peux plus utiliser la variable originale.
+On appelle cela "déplacer" (moving) une variable. Quand nous passons `vec0` dans `fill_vec`, elle est
+"déplacée" dans `vec1`, ce qui signifie que nous ne pouvons plus accéder à `vec0`.
 
-You could make another, separate version of the data that's in `vec0` and
-pass it to `fill_vec` instead. This is called cloning in Rust."""
+Tu pourrais créer une autre version séparée des données contenues dans `vec0` et
+la passer à `fill_vec` à la place. Cela s'appelle cloning (clonage) en Rust."""
 
 [[exercises]]
 name = "move_semantics3"
 dir = "06_move_semantics"
 hint = """
-The difference between this one and the previous ones is that the first line
-of `fn fill_vec` that had `let mut vec = vec;` is no longer there. You can,
-instead of adding that line back, add `mut` in one place that will change
-an existing binding to be a mutable binding instead of an immutable one :)"""
+La différence entre celui-ci et les précédents est que la première ligne
+de `fn fill_vec` qui avait `let mut vec = vec;` n'est plus là. Tu peux,
+au lieu de remettre cette ligne, ajouter `mut` à un endroit qui transformera
+un binding (liaison) existant en binding mutable plutôt qu'immutable :)"""
 
 [[exercises]]
 name = "move_semantics4"
 dir = "06_move_semantics"
 hint = """
-Carefully reason about the range in which each mutable reference is in
-scope. Does it help to update the value of `x` immediately after
-the mutable reference is taken?
-Read more about 'Mutable References' in the book's section 'References and
-Borrowing':
-https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references."""
+Réfléchis attentivement à la portée (scope) dans laquelle chaque référence mutable est
+active. Est-ce utile de mettre à jour la valeur de `x` immédiatement après
+avoir pris la référence mutable ?
+En savoir plus sur les 'Mutable References' (références mutables) dans la section 'References and Borrowing' du rust book :
+https://jimskapt.github.io/rust-book-fr/ch04-02-references-and-borrowing.html#les-r%C3%A9f%C3%A9rences-mutables"""
 
 [[exercises]]
 name = "move_semantics5"
 dir = "06_move_semantics"
 test = false
 hint = """
-To find the answer, you can consult the book section "References and Borrowing":
-https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+Pour trouver la réponse, tu peux consulter la section "References and Borrowing" du rust book :
+https://jimskapt.github.io/rust-book-fr/ch04-02-references-and-borrowing.html
 
-The first problem is that `get_char` is taking ownership of the string. So
-`data` is moved and can't be used for `string_uppercase`. `data` is moved to
-`get_char` first, meaning that `string_uppercase` can't manipulate the data.
+Le premier problème est que `get_char` prend possession (ownership) de la chaîne. Donc
+`data` est déplacée et ne peut pas être utilisée pour `string_uppercase`. `data` est d'abord déplacée vers
+`get_char`, ce qui signifie que `string_uppercase` ne peut pas manipuler les données.
 
-Once you've fixed that, `string_uppercase`'s function signature will also need
-to be adjusted."""
+Une fois que tu auras résolu ce problème, la signature de la fonction `string_uppercase` devra également
+être ajustée."""
 
 # STRUCTS
 
