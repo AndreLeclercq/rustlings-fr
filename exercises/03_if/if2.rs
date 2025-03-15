@@ -1,37 +1,37 @@
-// TODO: Fix the compiler error on this function.
+// TODO: Corrige l'erreur de compilation sur cette fonction.
 fn picky_eater(food: &str) -> &str {
-    if food == "strawberry" {
-        "Yummy!"
-    } else {
-        1
-    }
+   if food == "fraise" {
+       "Miam !"
+   } else {
+       "Je suppose que je peux manger ça."
+   }
 }
 
 fn main() {
-    // You can optionally experiment here.
+   // Tu peux expérimenter du code ici si tu le souhaites.
 }
 
-// TODO: Read the tests to understand the desired behavior.
-// Make all tests pass without changing them.
+// TODO: Lis les tests pour comprendre le comportement souhaité.
+// Fais passer tous les tests sans les modifier.
 #[cfg(test)]
 mod tests {
-    use super::*;
+   use super::*;
 
-    #[test]
-    fn yummy_food() {
-        // This means that calling `picky_eater` with the argument "food" should return "Yummy!".
-        assert_eq!(picky_eater("strawberry"), "Yummy!");
-    }
+   #[test]
+   fn yummy_food() {
+       // Cela signifie que l'appel de `picky_eater` avec l'argument "food" devrait retourner "Yummy!".
+       assert_eq!(picky_eater("fraise"), "Miam !");
+   }
 
-    #[test]
-    fn neutral_food() {
-        assert_eq!(picky_eater("potato"), "I guess I can eat that.");
-    }
+   #[test]
+   fn neutral_food() {
+       assert_eq!(picky_eater("patate"), "Je suppose que je peux manger ça.");
+   }
 
-    #[test]
-    fn default_disliked_food() {
-        assert_eq!(picky_eater("broccoli"), "No thanks!");
-        assert_eq!(picky_eater("gummy bears"), "No thanks!");
-        assert_eq!(picky_eater("literally anything"), "No thanks!");
-    }
+   #[test]
+   fn default_disliked_food() {
+       assert_eq!(picky_eater("brocoli"), "Non merci!");        
+       assert_eq!(picky_eater("bonbons"), "Non merci!");
+       assert_eq!(picky_eater("n'importe quoi"), "Non merci!");
+   }
 }
