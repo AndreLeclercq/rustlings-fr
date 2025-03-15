@@ -1,24 +1,24 @@
-// TODO: Fix the compiler error in this function.
+// TODO: Répare l'erreur de compilation dans cette fonction.
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let vec = vec;
+   let vec = vec;
 
-    vec.push(88);
+   vec.push(88);
 
-    vec
+   vec
 }
 
 fn main() {
-    // You can optionally experiment here.
+   // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+   use super::*;
 
-    #[test]
-    fn move_semantics1() {
-        let vec0 = vec![22, 44, 66];
-        let vec1 = fill_vec(vec0);
-        assert_eq!(vec1, vec![22, 44, 66, 88]);
-    }
+   #[test]
+   fn move_semantics1() {
+       let vec0 = vec![22, 44, 66];
+       let vec1 = fill_vec(vec0);
+       assert_eq!(vec1, vec![22, 44, 66, 88]);
+   }
 }

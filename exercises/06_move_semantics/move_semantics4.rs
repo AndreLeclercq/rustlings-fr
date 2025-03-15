@@ -1,18 +1,18 @@
 fn main() {
-    // You can optionally experiment here.
+   // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
 mod tests {
-    // TODO: Fix the compiler errors only by reordering the lines in the test.
-    // Don't add, change or remove any line.
-    #[test]
-    fn move_semantics4() {
-        let mut x = Vec::new();
-        let y = &mut x;
-        let z = &mut x;
-        y.push(42);
-        z.push(13);
-        assert_eq!(x, [42, 13]);
-    }
+   // TODO: Corrige les erreurs de compilation uniquement en réorganisant les lignes dans le test.
+   // N'ajoute, ne change ou ne supprime aucune ligne.
+   #[test]
+   fn move_semantics4() {
+       let mut x = Vec::new();
+       let y = &mut x;
+       let z = &mut x;
+       y.push(42);
+       z.push(13);
+       assert_eq!(x, [42, 13]);
+   }
 }
