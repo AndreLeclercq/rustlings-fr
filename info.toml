@@ -1,0 +1,24 @@
+# The format version is an indicator of the compatibility of third-party exercises with the
+# Rustlings program.
+# The format version is not the same as the version of the Rustlings program.
+# In case Rustlings makes an unavoidable breaking change to the expected format of third-party
+# exercises, you would need to raise this version and adapt to the new format.
+# Otherwise, the newest version of the Rustlings program won't be able to run these exercises.
+format_version = 1
+
+# Optional multi-line message to be shown to users when just starting with the exercises.
+welcome_message = """Bienvenue dans la version traduite de Rustlings."""
+
+# Optional multi-line message to be shown to users after finishing all exercises.
+final_message = """Bravo ! J'espère que ces exercices vous auront été utiles."""
+
+# INTRO
+
+[[exercises]]
+name = "intro1"
+dir = "00_intro"
+test = false
+skip_check_unsolved = true
+hint = """
+Tape `n` (pour 'next') afin de passer à l'exercice suivant.
+Tu pourrais avoir besoin d'appuyer sur ENTRÉE après avoir tapé `n`."""
