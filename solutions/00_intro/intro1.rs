@@ -1,4 +1,5 @@
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    // Félicitations, tu as terminé le premier exercice 🎉
+    // Comme introduction à Rustlings, le premier exercice demandait simplement
+    // de taper `n` dans le terminal pour passer à l'exercice suivant.
 }
