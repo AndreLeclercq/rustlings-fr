@@ -1,53 +1,53 @@
 fn animal_habitat(animal: &str) -> &str {
-    // TODO: Fix the compiler error in the statement below.
-    let identifier = if animal == "crab" {
+    // TODO: Corrige l'erreur de compilation dans l'instruction ci-dessous.
+    let identifier = if animal == "crabe" {
         1
-    } else if animal == "gopher" {
+    } else if animal == "spermophile" {
         2.0
-    } else if animal == "snake" {
+    } else if animal == "serpent" {
         3
     } else {
-        "Unknown"
+        "Inconnu"
     };
 
-    // Don't change the expression below!
+    // Ne change pas l'expression ci-dessous !
     if identifier == 1 {
-        "Beach"
+        "Plage"
     } else if identifier == 2 {
-        "Burrow"
+        "Terrier"
     } else if identifier == 3 {
-        "Desert"
+        "Désert"
     } else {
-        "Unknown"
+        "Inconnu"
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
-// Don't change the tests!
+// Ne modifie pas les tests !
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn gopher_lives_in_burrow() {
-        assert_eq!(animal_habitat("gopher"), "Burrow")
+        assert_eq!(animal_habitat("spermophile"), "Terrier")
     }
 
     #[test]
     fn snake_lives_in_desert() {
-        assert_eq!(animal_habitat("snake"), "Desert")
+        assert_eq!(animal_habitat("serpent"), "Désert")
     }
 
     #[test]
     fn crab_lives_on_beach() {
-        assert_eq!(animal_habitat("crab"), "Beach")
+        assert_eq!(animal_habitat("crabe"), "Plage")
     }
 
     #[test]
     fn unknown_animal() {
-        assert_eq!(animal_habitat("dinosaur"), "Unknown")
+        assert_eq!(animal_habitat("dinosaure"), "Inconnu")
     }
 }

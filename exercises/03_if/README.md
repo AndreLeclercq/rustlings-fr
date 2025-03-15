@@ -1,7 +1,6 @@
 # If
 
-`if`, the most basic (but still surprisingly versatile!) type of control flow, is what you'll learn here.
+`if`, la structure de contrôle la plus basique (mais toujours étonnamment polyvalent !) c'est ce que tu vas apprendre maintenant.
 
-## Further information
-
-- [Control Flow - if expressions](https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions)
+## Informations complémentaires
+- [Les structures de contrôle - Les expressions if](https://jimskapt.github.io/rust-book-fr/ch03-05-control-flow.html)
