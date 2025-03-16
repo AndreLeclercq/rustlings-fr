@@ -1,4 +1,9 @@
+fn current_favorite_color() -> String {
+    // Équivalent à `String::from("blue")`
+    "blue".to_string()
+}
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    let answer = current_favorite_color();
+    println!("Ma couleur préférée actuelle est {answer}");
 }

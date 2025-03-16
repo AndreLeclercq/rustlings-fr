@@ -410,42 +410,31 @@ name = "strings1"
 dir = "09_strings"
 test = false
 hint = """
-The `current_favorite_color` function is currently returning a string slice
-with the `'static` lifetime. We know this because the data of the string lives
-in our code itself -- it doesn't come from a file or user input or another
-program -- so it will live as long as our program lives.
+La fonction `current_favorite_color` renvoie actuellement un string slice (tranche de chaîne de caractères) avec la durée de vie `'static`. Nous le savons parce que les données de la chaîne existent directement dans notre code -- elles ne proviennent pas d'un fichier, d'une saisie utilisateur ou d'un autre programme -- donc elles vivront aussi longtemps que notre programme.
 
-But it is still a string slice. There's one way to create a `String` by
-converting a string slice covered in the Strings chapter of the book, and
-another way that uses the `From` trait."""
+Mais c'est toujours un string slice. Il existe une façon de créer un `String` en convertissant un string slice, comme expliqué dans le chapitre sur les Strings du rust book, et une autre méthode qui utilise le trait `From`.
+https://jimskapt.github.io/rust-book-fr/ch08-02-strings.html"""
 
 [[exercises]]
 name = "strings2"
 dir = "09_strings"
 test = false
 hint = """
-Yes, it would be really easy to fix this by just changing the value bound to
-`word` to be a string slice instead of a `String`, wouldn't it? There is a way
-to add one character to the `if` statement, though, that will coerce the
-`String` into a string slice.
+Oui, ce serait vraiment facile de corriger cela en changeant simplement la valeur liée à `word` pour qu'elle soit un string slice (tranche de chaîne) au lieu d'un `String`, n'est-ce pas ? Il existe cependant une façon d'ajouter un seul caractère à l'instruction `if` qui permettra de contraindre le `String` en un string slice.
 
-Side note: If you're interested in learning about how this kind of reference
-conversion works, you can jump ahead in the book and read this part in the
-smart pointers chapter:
-https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods"""
+Note : Si tu es intéressé(e) par comprendre comment fonctionne ce type de conversion de référence, tu peux avancer dans le rust book et lire cette partie dans le chapitre sur les smart pointers (pointeurs intelligents) :
+https://jimskapt.github.io/rust-book-fr/ch15-02-deref.html#extrapolation-de-d%C3%A9r%C3%A9f%C3%A9rencement-implicite-avec-les-fonctions-et-les-m%C3%A9thodes"""
 
 [[exercises]]
 name = "strings3"
 dir = "09_strings"
 hint = """
-There are many useful standard library functions for strings. Let's try and use
-some of them:
+Il existe de nombreuses fonctions utiles dans la bibliothèque standard pour les strings (chaînes de caractères). Essayons d'en utiliser quelques-unes :
 https://doc.rust-lang.org/std/string/struct.String.html#method.trim
 
-For the `compose_me` method: You can either use the `format!` macro, or convert
-the string slice into an owned string, which you can then freely extend.
+Pour la méthode `compose_me` : Tu peux soit utiliser la macro `format!`, soit convertir la tranche de chaîne en une chaîne possédée, que tu pourras ensuite étendre librement.
 
-For the `replace_me` method, you can check out the `replace` method:
+Pour la méthode `replace_me`, tu peux consulter la méthode `replace` :
 https://doc.rust-lang.org/std/string/struct.String.html#method.replace"""
 
 [[exercises]]
@@ -453,14 +442,13 @@ name = "strings4"
 dir = "09_strings"
 test = false
 hint = """
-Replace `placeholder` with either `string` or `string_slice` in the `main`
-function.
+Remplace `placeholder` par `string` ou `string_slice` dans la fonction `main`.
 
-Example:
+Exemple :
 `placeholder("blue");`
-should become
+doit devenir
 `string_slice("blue");`
-because "blue" is `&str`, not `String`."""
+car "blue" est un `&str`, pas un `String`."""
 
 # MODULES
 
