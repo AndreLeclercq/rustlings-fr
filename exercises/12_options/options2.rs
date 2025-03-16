@@ -1,5 +1,5 @@
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
@@ -9,7 +9,7 @@ mod tests {
         let target = "rustlings";
         let optional_target = Some(target);
 
-        // TODO: Make this an if-let statement whose value is `Some`.
+        // TODO: Transforme ceci en une expression if-let dont la valeur est `Some`.
         word = optional_target {
             assert_eq!(word, target);
         }
@@ -26,9 +26,9 @@ mod tests {
 
         let mut cursor = range;
 
-        // TODO: Make this a while-let statement. Remember that `Vec::pop()`
-        // adds another layer of `Option`. You can do nested pattern matching
-        // in if-let and while-let statements.
+        // TODO: Transforme ceci en une expression while-let. Rappelle-toi que `Vec::pop()`
+        // ajoute une autre couche d'`Option`. Tu peux faire de la correspondance de motifs imbriqués
+        // dans les expressions if-let et while-let.
         integer = optional_integers.pop() {
             assert_eq!(integer, cursor);
             cursor -= 1;

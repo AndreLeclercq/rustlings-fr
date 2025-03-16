@@ -512,7 +512,7 @@ https://jimskapt.github.io/rust-book-fr/ch08-03-hash-maps.html#modifier-une-vale
 [[exercises]]
 name = "quiz2"
 dir = "quizzes"
-hint = "The `+` operator can concatenate a `String` with a `&str`."
+hint = "L'opérateur `+` peut concaténer une `String` avec un `&str` (string slice)."
 
 # OPTIONS
 
@@ -520,38 +520,33 @@ hint = "The `+` operator can concatenate a `String` with a `&str`."
 name = "options1"
 dir = "12_options"
 hint = """
-Options can have a `Some` value, with an inner value, or a `None` value,
-without an inner value.
+Les Options peuvent avoir une valeur `Some`, avec une valeur interne, ou une valeur `None`, sans valeur interne.
 
-There are multiple ways to get at the inner value, you can use `unwrap`, or
-pattern match. Unwrapping is the easiest, but how do you do it safely so that
-it doesn't panic in your face later?"""
+Il existe plusieurs façons d'accéder à la valeur interne, tu peux utiliser `unwrap`, ou faire du pattern matching (filtrage par motif). Unwrap est le plus simple, mais comment le faire en toute sécurité pour éviter que ton programme ne panique plus tard ?"""
 
 [[exercises]]
 name = "options2"
 dir = "12_options"
 hint = """
-Check out:
+Jette un œil à :
 
 - https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
 - https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
 
-Remember that `Option`s can be nested in if-let and while-let statements.
+N'oublie pas que les `Option` peuvent être imbriquées dans les expressions if-let et while-let.
 
-For example: `if let Some(Some(x)) = y`
+Par exemple : `if let Some(Some(x)) = y`
 
-Also see `Option::flatten`"""
+Voir aussi `Option::flatten`"""
 
 [[exercises]]
 name = "options3"
 dir = "12_options"
 test = false
 hint = """
-The compiler says a partial move happened in the `match` statement. How can
-this be avoided? The compiler shows the correction needed.
+Le compilateur indique qu'un déplacement partiel (partial move) s'est produit dans l'instruction `match`. Comment éviter cela ? Le compilateur montre la correction nécessaire.
 
-After making the correction as suggested by the compiler, read the related docs
-page:
+Après avoir effectué la correction suggérée par le compilateur, lis la page de documentation associée :
 https://doc.rust-lang.org/std/keyword.ref.html"""
 
 # ERROR HANDLING

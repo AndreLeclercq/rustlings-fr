@@ -1,13 +1,13 @@
-// This function returns how much icecream there is left in the fridge.
-// If it's before 22:00 (24-hour system), then 5 scoops are left. At 22:00,
-// someone eats it all, so no icecream is left (value 0). Return `None` if
-// `hour_of_day` is higher than 23.
+// Cette fonction renvoie la quantité de glace restante dans le frigo.
+// Si on est avant 22h00, alors il reste 5 boules. À 22h00,
+// quelqu'un mange tout, donc il ne reste plus de glace (valeur 0). Renvoie `None` si
+// `hour_of_day` est supérieur à 23.
 fn maybe_icecream(hour_of_day: u16) -> Option<u16> {
-    // TODO: Complete the function body.
+    // TODO: Complète le corps de la fonction.
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
@@ -16,11 +16,11 @@ mod tests {
 
     #[test]
     fn raw_value() {
-        // TODO: Fix this test. How do you get the value contained in the
+        // TODO: Corrige ce test. Comment obtiens-tu la valeur contenue dans le
         // Option?
         let icecreams = maybe_icecream(12);
 
-        assert_eq!(icecreams, 5); // Don't change this line.
+        assert_eq!(icecreams, 5); // Ne change pas cette ligne.
     }
 
     #[test]

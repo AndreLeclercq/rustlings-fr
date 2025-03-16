@@ -7,11 +7,11 @@ struct Point {
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
 
-    // TODO: Fix the compiler error by adding something to this match statement.
+    // TODO: Corrige l'erreur du compilateur en ajoutant quelque chose à cette instruction match.
     match optional_point {
-        Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
-        _ => panic!("No match!"),
+        Some(p) => println!("Les coordonnées sont {},{}", p.x, p.y),
+        _ => panic!("Pas de correspondance !"),
     }
 
-    println!("{optional_point:?}"); // Don't change this line.
+    println!("{optional_point:?}"); // Ne change pas cette ligne.
 }
