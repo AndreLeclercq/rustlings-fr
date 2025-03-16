@@ -15,11 +15,13 @@ impl Queue {
 }
 
 fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
-    // TODO: We want to send `tx` to both threads. But currently, it is moved
-    // into the first thread. How could you solve this problem?
+    // TODO: Nous voulons envoyer `tx` aux deux threads. Mais actuellement, il est
+    // déplacé dans le premier thread. Comment pourrais-tu résoudre ce problème ?
+    let tx1 = tx.clone(); // Cloner le sender pour l'utiliser dans les deux threads
+
     thread::spawn(move || {
         for val in q.first_half {
-            println!("Sending {val:?}");
+            println!("Envoi de {val:?}");
             tx.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
@@ -27,15 +29,15 @@ fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
 
     thread::spawn(move || {
         for val in q.second_half {
-            println!("Sending {val:?}");
-            tx.send(val).unwrap();
+            println!("Envoi de {val:?}");
+            tx1.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
     });
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
