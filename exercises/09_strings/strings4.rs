@@ -1,37 +1,37 @@
-// Calls of this function should be replaced with calls of `string_slice` or `string`.
+// Les appels à cette fonction devraient être remplacés par des appels à `string_slice` ou `string`.
 fn placeholder() {}
 
 fn string_slice(arg: &str) {
-    println!("{arg}");
+   println!("{arg}");
 }
 
 fn string(arg: String) {
-    println!("{arg}");
+   println!("{arg}");
 }
 
-// TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(…)` with either `string_slice(…)`
-// or `string(…)` depending on what you think each value is.
+// TODO: Voici plusieurs valeurs - certaines sont `String`, d'autres sont `&str`.
+// Ta tâche est de remplacer `placeholder(…)` par soit `string_slice(…)`
+// soit `string(…)` selon ce que tu penses que chaque valeur est.
 fn main() {
-    placeholder("blue");
+   placeholder("blue");
 
-    placeholder("red".to_string());
+   placeholder("red".to_string());
 
-    placeholder(String::from("hi"));
+   placeholder(String::from("hi"));
 
-    placeholder("rust is fun!".to_owned());
+   placeholder("rust is fun!".to_owned());
 
-    placeholder("nice weather".into());
+   placeholder("nice weather".into());
 
-    placeholder(format!("Interpolation {}", "Station"));
+   placeholder(format!("Interpolation {}", "Station"));
 
-    // WARNING: This is byte indexing, not character indexing.
-    // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+   // ATTENTION: Ceci est une indexation d'octets, pas une indexation de caractères.
+   // L'indexation de caractères peut être faite en utilisant `s.chars().nth(INDEX)`.
+   placeholder(&String::from("abc")[0..1]);
 
-    placeholder("  hello there ".trim());
+   placeholder("  hello there ".trim());
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+   placeholder("Happy Monday!".replace("Mon", "Tues"));
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+   placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }
