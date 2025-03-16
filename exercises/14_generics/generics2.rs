@@ -1,18 +1,18 @@
-// This powerful wrapper provides the ability to store a positive integer value.
-// TODO: Rewrite it using a generic so that it supports wrapping ANY type.
-struct Wrapper {
-    value: u32,
+// Ce wrapper puissant permet de stocker une valeur de type entier positif.
+// TODO: Réécris-le en utilisant un générique (generic) pour qu'il supporte l'ENROBAGE (wrapping) DE N'IMPORTE QUEL type.
+struct Wrapper<T> {
+    value: T,
 }
 
-// TODO: Adapt the struct's implementation to be generic over the wrapped value.
-impl Wrapper {
-    fn new(value: u32) -> Self {
+// TODO: Adapte l'implémentation de la structure pour qu'elle soit générique sur la valeur enrobée.
+impl<T> Wrapper<T> {
+    fn new(value: T) -> Self {
         Wrapper { value }
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
