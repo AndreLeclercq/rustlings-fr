@@ -1,8 +1,8 @@
-# Iterators
+# Itérateurs (Iterators)
 
-This section will teach you about Iterators.
+Cette section va t'apprendre tout sur les itérateurs (iterators).
 
-## Further information
+## Informations complémentaires
 
-- [Iterator](https://doc.rust-lang.org/book/ch13-02-iterators.html)
-- [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/)
+- [Itérateur (Iterator)](https://jimskapt.github.io/rust-book-fr/ch13-02-iterators.html)
+- [Documentation des itérateurs](https://doc.rust-lang.org/stable/std/iter/)

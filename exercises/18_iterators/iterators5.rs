@@ -1,8 +1,9 @@
-// Let's define a simple model to track Rustlings' exercise progress. Progress
-// will be modelled using a hash map. The name of the exercise is the key and
-// the progress is the value. Two counting functions were created to count the
-// number of exercises with a given progress. Recreate this counting
-// functionality using iterators. Try to not use imperative loops (for/while).
+// Définissons un modèle simple pour suivre la progression des exercices Rustlings. 
+// La progression sera modélisée à l'aide d'une table de hachage (hash map). 
+// Le nom de l'exercice est la clé et la progression est la valeur. 
+// Deux fonctions de comptage ont été créées pour compter le nombre 
+// d'exercices avec une progression donnée. Recrée cette fonctionnalité de 
+// comptage en utilisant des itérateurs. Essaie de ne pas utiliser de boucles impératives (for/while).
 
 use std::collections::HashMap;
 
@@ -23,10 +24,10 @@ fn count_for(map: &HashMap<String, Progress>, value: Progress) -> usize {
     count
 }
 
-// TODO: Implement the functionality of `count_for` but with an iterator instead
-// of a `for` loop.
+// TODO : Implémente la fonctionnalité de `count_for` mais avec un itérateur 
+// au lieu d'une boucle `for`.
 fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
-    // `map` is a hash map with `String` keys and `Progress` values.
+    // `map` est une table de hachage avec des clés `String` et des valeurs `Progress`.
     // map = { "variables1": Complete, "from_str": None, … }
 }
 
@@ -42,16 +43,16 @@ fn count_collection_for(collection: &[HashMap<String, Progress>], value: Progres
     count
 }
 
-// TODO: Implement the functionality of `count_collection_for` but with an
-// iterator instead of a `for` loop.
+// TODO : Implémente la fonctionnalité de `count_collection_for` mais avec 
+// un itérateur au lieu d'une boucle `for`.
 fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Progress) -> usize {
-    // `collection` is a slice of hash maps.
+    // `collection` est un tableau de tables de hachage.
     // collection = [{ "variables1": Complete, "from_str": None, … },
     //               { "variables2": Complete, … }, … ]
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
