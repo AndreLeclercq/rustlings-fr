@@ -1,4 +1,10 @@
+// Le macro est maintenant défini avant son appel.
+macro_rules! my_macro {
+   () => {
+       println!("Découvre ma macro !");
+   };
+}
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+   my_macro!();
 }
