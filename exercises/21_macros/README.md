@@ -1,14 +1,10 @@
 # Macros
 
-Rust's macro system is very powerful, but also kind of difficult to wrap your
-head around. We're not going to teach you how to write your own fully-featured
-macros. Instead, we'll show you how to use and create them.
+Le système de macros de Rust est très puissant, mais aussi assez difficile à comprendre. Nous n'allons pas t'apprendre à écrire des macros complètement abouties. À la place, nous allons te montrer comment les utiliser et les créer.
 
-If you'd like to learn more about writing your own macros, the
-[macrokata](https://github.com/tfpk/macrokata) project has a similar style
-of exercises to Rustlings, but is all about learning to write Macros.
+Si tu souhaites en apprendre plus sur l'écriture de tes propres macros, le projet [macrokata](https://github.com/tfpk/macrokata) propose des exercices similaires à Rustlings, mais qui se concentrent entièrement sur l'apprentissage de l'écriture de macros.
 
-## Further information
+## Informations complémentaires
 
-- [Macros](https://doc.rust-lang.org/book/ch19-06-macros.html)
-- [The Little Book of Rust Macros](https://veykril.github.io/tlborm/)
+- [Macros](https://jimskapt.github.io/rust-book-fr/ch19-06-macros.html)
+- [Le Petit Livre des Macros Rust](https://veykril.github.io/tlborm/)

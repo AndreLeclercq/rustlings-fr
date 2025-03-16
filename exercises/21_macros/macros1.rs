@@ -1,10 +1,10 @@
 macro_rules! my_macro {
     () => {
-        println!("Check out my macro!");
+        println!("Regarde ma macro !");
     };
 }
 
 fn main() {
-    // TODO: Fix the macro call.
+    // TODO: Corrige l'appel de la macro.
     my_macro();
 }

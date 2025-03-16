@@ -955,41 +955,34 @@ name = "macros1"
 dir = "21_macros"
 test = false
 hint = """
-When you call a macro, you need to add something special compared to a regular
-function call."""
+Lorsque tu appelles une macro (macro), tu dois ajouter quelque chose de spécial par rapport à un appel de fonction classique."""
 
 [[exercises]]
 name = "macros2"
 dir = "21_macros"
 test = false
 hint = """
-Macros don't quite play by the same rules as the rest of Rust, in terms of
-what's available where.
+Les macros ne suivent pas tout à fait les mêmes règles que le reste de Rust, en termes de ce qui est disponible où.
 
-Unlike other things in Rust, the order of "where you define a macro" versus
-"where you use it" actually matters."""
+Contrairement aux autres éléments de Rust, l'ordre entre "l'endroit où tu définis une macro" et "l'endroit où tu l'utilises" importe réellement."""
 
 [[exercises]]
 name = "macros3"
 dir = "21_macros"
 test = false
 hint = """
-In order to use a macro outside of its module, you need to do something
-special to the module to lift the macro out into its parent."""
+Pour utiliser une macro en dehors de son module, tu dois faire quelque chose de spécial au module pour la faire remonter vers son parent."""
 
 [[exercises]]
 name = "macros4"
 dir = "21_macros"
 test = false
 hint = """
-You only need to add a single character to make this compile.
+Tu n'as besoin que d'ajouter un seul caractère pour faire compiler ce code.
 
-The way macros are written, it wants to see something between each "macro arm",
-so it can separate them.
+La façon dont les macros sont écrites, elle veut voir quelque chose entre chaque "macro arm", pour pouvoir les séparer.
 
-That's all the macro exercises we have in here, but it's barely even scratching
-the surface of what you can do with Rust's macros. For a more thorough
-introduction, you can have a read through 'The Little Book of Rust Macros':
+C'est tout ce que nous avons comme exercices de macros ici, mais c'est à peine un aperçu de ce que tu peux faire avec les macros de Rust. Pour une introduction plus approfondie, tu peux lire 'The Little Book of Rust Macros' :
 https://veykril.github.io/tlborm/"""
 
 #  CLIPPY

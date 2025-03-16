@@ -1,4 +1,15 @@
+// Ajout des points-virgules pour séparer les branches du macro.
+#[rustfmt::skip]
+macro_rules! my_macro {
+   () => {
+       println!("Découvre ma macro !");
+   };
+   ($val:expr) => {
+       println!("Regarde cet autre macro : {}", $val);
+   };
+}
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+   my_macro!();
+   my_macro!(7777);
 }
