@@ -649,51 +649,51 @@ https://jimskapt.github.io/rust-book-fr/ch10-01-syntax.html#dans-la-d%C3%A9finit
 name = "traits1"
 dir = "15_traits"
 hint = """
-More about traits in The Book:
-https://doc.rust-lang.org/book/ch10-02-traits.html
+En savoir plus sur les traits (traits) dans The Book :
+https://jimskapt.github.io/rust-book-fr/ch10-02-traits.html
 
-The `+` operator can concatenate a `String` with a `&str`."""
+L'opérateur `+` peut concaténer un `String` avec un `&str`."""
 
 [[exercises]]
 name = "traits2"
 dir = "15_traits"
 hint = """
-Notice how the trait takes ownership of `self` and returns `Self`.
+Le trait prend possession de `self` et retourne `Self`.
 
-Although the signature of `append_bar` in the trait takes `self` as argument,
-the implementation can take `mut self` instead. This is possible because the
-the value is owned anyway."""
+Bien que la signature de `append_bar` dans le trait prenne `self` comme argument,
+l'implémentation peut prendre `mut self` à la place. C'est possible car 
+la valeur est de toute façon possédée."""
 
 [[exercises]]
 name = "traits3"
 dir = "15_traits"
 hint = """
-Traits can have a default implementation for functions. Data types that
-implement the trait can then use the default version of these functions
-if they choose not to implement the function themselves.
+Les traits peuvent avoir une implémentation par défaut pour des fonctions. Les types de données qui
+implémentent le trait peuvent alors utiliser la version par défaut de ces fonctions
+s'ils choisissent de ne pas implémenter la fonction eux-mêmes.
 
-Related section in The Book:
-https://doc.rust-lang.org/book/ch10-02-traits.html#default-implementations"""
+Voir dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch10-02-traits.html#impl%C3%A9mentations-par-d%C3%A9faut"""
 
 [[exercises]]
 name = "traits4"
 dir = "15_traits"
 hint = """
-Instead of using concrete types as parameters you can use traits. Try replacing
-`???` with `impl [what goes here?]`.
+Au lieu d'utiliser des types concrets (concrete types) comme paramètres, tu peux utiliser des traits (traits). Essaie de remplacer
+`???` par `impl [que mettre ici ?]`.
 
-Related section in The Book:
-https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters"""
+Voir dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch10-02-traits.html#des-traits-en-param%C3%A8tres"""
 
 [[exercises]]
 name = "traits5"
 dir = "15_traits"
 hint = """
-To ensure a parameter implements multiple traits use the '+ syntax'. Try
-replacing `???` with 'impl [what goes here?] + [what goes here?]'.
+Pour s'assurer qu'un paramètre implémente plusieurs traits, utilise la syntaxe '+'. Essaie
+de remplacer `???` par 'impl [premier trait] + [second trait]'.
 
-Related section in The Book:
-https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax"""
+Voir dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch10-02-traits.html#renseigner-plusieurs-traits-li%C3%A9s-avec-la-syntaxe-"""
 
 # QUIZ 3
 
@@ -701,14 +701,13 @@ https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bou
 name = "quiz3"
 dir = "quizzes"
 hint = """
-To find the best solution to this challenge, you need to recall your knowledge
-of traits, specifically "Trait Bound Syntax":
-https://doc.rust-lang.org/book/ch10-02-traits.html#trait-bound-syntax
+Pour résoudre ce défi, tu dois te rappeler tes connaissances sur les traits (traits), en particulier la "Syntaxe des bornes de traits (Trait Bound Syntax)":
+https://jimskapt.github.io/rust-book-fr/ch10-02-traits.html#la-syntaxe-du-trait-li%C3%A9
 
-Here is how to specify a trait bound for an implementation block:
+Voici comment spécifier une borne de trait pour un bloc d'implémentation :
 `impl<T: Trait1 + Trait2 + …> for Foo<T> { … }`
 
-You may need this:
+Tu pourrais avoir besoin de ceci :
 `use std::fmt::Display;`"""
 
 # LIFETIMES
