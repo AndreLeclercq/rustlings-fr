@@ -482,30 +482,30 @@ hint = """
 name = "hashmaps1"
 dir = "11_hashmaps"
 hint = """
-The number of fruits should be at least 5 and you have to put at least 3
-different types of fruits."""
+Le nombre de fruits devrait être au moins 5 et tu dois inclure au moins 3
+types différents de fruits."""
 
 [[exercises]]
 name = "hashmaps2"
 dir = "11_hashmaps"
 hint = """
-Use the `entry()` and `or_insert()` methods of `HashMap` to achieve this.
+Utilise les méthodes `entry()` et `or_insert()` de `HashMap` pour accomplir cela.
 
-Learn more in The Book:
-https://doc.rust-lang.org/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value"""
+Pour en savoir plus, renvez-vous dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch08-03-hash-maps.html#ajouter-une-valeur-seulement-si-la-cl%C3%A9-na-pas-d%C3%A9j%C3%A0-de-valeur"""
 
 [[exercises]]
 name = "hashmaps3"
 dir = "11_hashmaps"
 hint = """
-Hint 1: Use the `entry()` and `or_default()` methods of `HashMap` to insert the
-        default value of `TeamScores` if a team doesn't exist in the table yet.
+Indice 1 : Utilise les méthodes `entry()` et `or_default()` de `HashMap` pour insérer la
+       valeur par défaut de `TeamScores` si une équipe n'existe pas encore dans la table.
 
-Hint 2: If there is already an entry for a given key, the value returned by
-        `entry()` can be updated based on the existing value.
+Indice 2 : S'il existe déjà une entrée pour une clé donnée, la valeur renvoyée par
+       `entry()` peut être mise à jour en fonction de la valeur existante.
 
-Learn more in The Book:
-https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value"""
+Pour en savoir plus, rendez-vous dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch08-03-hash-maps.html#modifier-une-valeur-en-fonction-de-lancienne-valeur"""
 
 # QUIZ 2
 
