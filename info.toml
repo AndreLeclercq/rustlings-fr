@@ -771,82 +771,77 @@ https://jimskapt.github.io/rust-book-fr/ch11-01-writing-tests.html#v%C3%A9rifier
 name = "iterators1"
 dir = "18_iterators"
 hint = """
-An iterator goes through all elements in a collection, but what if we've run
-out of elements? What should we expect here? If you're stuck, take a look at
-https://doc.rust-lang.org/std/iter/trait.Iterator.html"""
+Un iterator (itérateur) parcourt tous les éléments d'une collection, mais que se passe-t-il quand nous n'avons plus d'éléments? Qu'est-ce qu'on devrait attendre ici? Si tu es bloqué, jette un œil à https://doc.rust-lang.org/std/iter/trait.Iterator.html"""
 
 [[exercises]]
 name = "iterators2"
 dir = "18_iterators"
 hint = """
-`capitalize_first`:
+`capitalize_first` :
 
-The variable `first` is a `char`. It needs to be capitalized and added to the
-remaining characters in `chars` in order to return the correct `String`.
+La variable `first` est un `char`. Elle doit être mise en majuscule et ajoutée aux
+caractères restants dans `chars` afin de renvoyer la bonne `String`.
 
-The remaining characters in `chars` can be viewed as a string slice using the
-`as_str` method.
+Les caractères restants dans `chars` peuvent être vus comme une tranche de chaîne en utilisant la
+méthode `as_str`.
 
-The documentation for `char` contains many useful methods.
+La documentation pour `char` contient de nombreuses méthodes utiles.
 https://doc.rust-lang.org/std/primitive.char.html
 
-Use `char::to_uppercase`. It returns an iterator that can be converted to a
+Utilise `char::to_uppercase`. Cela renvoie un iterator (itérateur) qui peut être converti en
 `String`.
 
-`capitalize_words_vector`:
+`capitalize_words_vector` :
 
-Create an iterator from the slice. Transform the iterated values by applying
-the `capitalize_first` function. Remember to `collect` the iterator.
+Crée un iterator à partir de la tranche. Transforme les valeurs itérées en appliquant
+la fonction `capitalize_first`. N'oublie pas de `collect` l'iterator.
 
-`capitalize_words_string`:
+`capitalize_words_string` :
 
-This is surprisingly similar to the previous solution. `collect` is very
-powerful and very general. Rust just needs to know the desired type."""
+C'est étonnamment similaire à la solution précédente. `collect` est très
+puissant et très général. Rust a juste besoin de connaître le type souhaité."""
 
 [[exercises]]
 name = "iterators3"
 dir = "18_iterators"
 hint = """
-The `divide` function needs to return the correct error when the divisor is 0 or
-when even division is not possible.
+La fonction `divide` doit renvoyer l'erreur appropriée quand le diviseur est 0 ou
+quand la division entière n'est pas possible.
 
-The `division_results` variable needs to be collected into a collection type.
+La variable `division_results` doit être collectée dans un type de collection.
 
-The `result_with_list` function needs to return a single `Result` where the
-success case is a vector of integers and the failure case is a `DivisionError`.
+La fonction `result_with_list` doit renvoyer un seul `Result` où le
+cas de succès est un vecteur d'entiers et le cas d'échec est un `DivisionError`.
 
-The `list_of_results` function needs to return a vector of results.
+La fonction `list_of_results` doit renvoyer un vecteur de résultats.
 
-See https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect for
-how the `FromIterator` trait is used in `collect()`. This trait is REALLY
-powerful! It can make the solution to this exercise much easier."""
+Voir https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect pour
+comprendre comment le trait `FromIterator` est utilisé dans `collect()`. Ce trait est VRAIMENT
+puissant ! Il peut rendre la solution de cet exercice beaucoup plus simple."""
 
 [[exercises]]
 name = "iterators4"
 dir = "18_iterators"
 hint = """
-In an imperative language, you might write a `for` loop that updates a mutable
-variable. Or, you might write code utilizing recursion and a match clause. In
-Rust, you can take another functional approach, computing the factorial
-elegantly with ranges and iterators.
+Dans un langage impératif, tu pourrais écrire une boucle `for` qui met à jour une variable mutable. Ou, tu pourrais écrire du code utilisant la récursion et une clause match. En Rust, tu peux adopter une autre approche fonctionnelle, en calculant la factorielle élégamment avec des ranges (plages) et des iterators.
 
-Check out the `fold` and `rfold` methods!"""
+Jette un œil aux méthodes `fold` et `rfold` !"""
 
 [[exercises]]
 name = "iterators5"
 dir = "18_iterators"
 hint = """
-The documentation for the `std::iter::Iterator` trait contains numerous methods
-that would be helpful here.
+La documentation du trait `std::iter::Iterator` contient de nombreuses méthodes 
+qui seraient utiles ici.
 
-The `collection` variable in `count_collection_iterator` is a slice of
-`HashMap`s. It needs to be converted into an iterator in order to use the
-iterator methods.
+La variable `collection` dans `count_collection_iterator` est une tranche de 
+`HashMap`. Elle doit être convertie en iterator (itérateur) afin d'utiliser les 
+méthodes d'itérateur.
 
-The `fold` method can be useful in the `count_collection_iterator` function.
+La méthode `fold` peut être utile dans la fonction `count_collection_iterator`.
 
-For a further challenge, consult the documentation for `Iterator` to find
-a different method that could make your code more compact than using `fold`."""
+Pour un défi supplémentaire, consulte la documentation de `Iterator` pour trouver 
+une méthode différente qui pourrait rendre ton code plus compact que l'utilisation de `fold`."""
 
 # SMART POINTERS
 
