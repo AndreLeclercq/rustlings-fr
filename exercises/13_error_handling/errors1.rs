@@ -1,20 +1,20 @@
-// TODO: This function refuses to generate text to be printed on a nametag if
-// you pass it an empty string. It'd be nicer if it explained what the problem
-// was instead of just returning `None`. Thankfully, Rust has a similar
-// construct to `Option` that can be used to express error conditions. Change
-// the function signature and body to return `Result<String, String>` instead
-// of `Option<String>`.
+// TODO: Cette fonction refuse de générer du texte pour un nametag si
+// tu lui passes une chaîne vide. Ce serait plus sympa si elle expliquait quel est le problème
+// au lieu de simplement renvoyer `None`. Heureusement, Rust possède une structure
+// similaire à `Option` qui peut être utilisée pour exprimer des conditions d'erreur. Change
+// la signature et le corps de la fonction pour renvoyer `Result<String, String>` au lieu
+// de `Option<String>`.
 fn generate_nametag_text(name: String) -> Option<String> {
     if name.is_empty() {
-        // Empty names aren't allowed
+        // Les noms vides ne sont pas autorisés
         None
     } else {
-        Some(format!("Hi! My name is {name}"))
+        Some(format!("Salut ! Je m'appelle {name}"))
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
@@ -25,7 +25,7 @@ mod tests {
     fn generates_nametag_text_for_a_nonempty_name() {
         assert_eq!(
             generate_nametag_text("Beyoncé".to_string()).as_deref(),
-            Ok("Hi! My name is Beyoncé"),
+            Ok("Salut ! Je m'appelle Beyoncé"),
         );
     }
 
@@ -35,7 +35,7 @@ mod tests {
             generate_nametag_text(String::new())
                 .as_ref()
                 .map_err(|e| e.as_str()),
-            Err("Empty names aren't allowed"),
+            Err("Les noms vides ne sont pas autorisés"),
         );
     }
 }

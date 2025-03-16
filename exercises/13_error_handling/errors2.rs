@@ -1,18 +1,18 @@
-// Say we're writing a game where you can buy items with tokens. All items cost
-// 5 tokens, and whenever you purchase items there is a processing fee of 1
-// token. A player of the game will type in how many items they want to buy, and
-// the `total_cost` function will calculate the total cost of the items. Since
-// the player typed in the quantity, we get it as a string. They might have
-// typed anything, not just numbers!
+// Disons que nous écrivons un jeu où tu peux acheter des objets avec des jetons. Tous les objets coûtent
+// 5 jetons, et à chaque achat il y a des frais de traitement de 1
+// jeton. Un joueur du jeu va saisir combien d'objets il veut acheter, et
+// la fonction `total_cost` calculera le coût total des objets. Comme
+// le joueur a saisi la quantité, nous la recevons sous forme de chaîne de caractères. Il pourrait avoir
+// saisi n'importe quoi, pas seulement des nombres !
 //
-// Right now, this function isn't handling the error case at all. What we want
-// to do is: If we call the `total_cost` function on a string that is not a
-// number, that function will return a `ParseIntError`. In that case, we want to
-// immediately return that error from our function and not try to multiply and
-// add.
+// Actuellement, cette fonction ne gère pas du tout le cas d'erreur. Ce que nous voulons
+// faire est : Si nous appelons la fonction `total_cost` avec une chaîne qui n'est pas un
+// nombre, cette fonction renverra une `ParseIntError`. Dans ce cas, nous voulons
+// immédiatement renvoyer cette erreur depuis notre fonction et ne pas essayer de multiplier et
+// d'additionner.
 //
-// There are at least two ways to implement this that are both correct. But one
-// is a lot shorter!
+// Il y a au moins deux façons de l'implémenter qui sont toutes deux correctes. Mais l'une
+// est beaucoup plus courte !
 
 use std::num::ParseIntError;
 
@@ -20,14 +20,14 @@ fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     let processing_fee = 1;
     let cost_per_item = 5;
 
-    // TODO: Handle the error case as described above.
+    // TODO: Gère le cas d'erreur comme décrit ci-dessus.
     let qty = item_quantity.parse::<i32>();
 
     Ok(qty * cost_per_item + processing_fee)
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]

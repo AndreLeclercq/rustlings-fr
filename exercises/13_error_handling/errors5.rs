@@ -1,15 +1,15 @@
-// This exercise is an altered version of the `errors4` exercise. It uses some
-// concepts that we won't get to until later in the course, like `Box` and the
-// `From` trait. It's not important to understand them in detail right now, but
-// you can read ahead if you like. For now, think of the `Box<dyn ???>` type as
-// an "I want anything that does ???" type.
+// Cet exercice est une version modifiée de l'exercice `errors4`. Il utilise certains
+// concepts que nous ne verrons que plus tard dans le cours, comme `Box` et le
+// trait `From`. Il n'est pas important de les comprendre en détail maintenant, mais
+// tu peux lire en avance si tu le souhaites. Pour l'instant, considère le type `Box<dyn ???>` comme
+// un type "Je veux n'importe quoi qui fait ???".
 //
-// In short, this particular use case for boxes is for when you want to own a
-// value and you care only that it is a type which implements a particular
-// trait. To do so, The `Box` is declared as of type `Box<dyn Trait>` where
-// `Trait` is the trait the compiler looks for on any value used in that
-// context. For this exercise, that context is the potential errors which
-// can be returned in a `Result`.
+// En bref, ce cas d'utilisation particulier des box est pour quand tu veux posséder une
+// valeur et que tu te préoccupes uniquement qu'elle soit d'un type qui implémente un trait
+// particulier. Pour ce faire, la `Box` est déclarée comme étant de type `Box<dyn Trait>` où
+// `Trait` est le trait que le compilateur recherche sur toute valeur utilisée dans ce
+// contexte. Pour cet exercice, ce contexte est celui des erreurs potentielles qui
+// peuvent être renvoyées dans un `Result`.
 
 use std::error::Error;
 use std::fmt;
@@ -20,12 +20,12 @@ enum CreationError {
     Zero,
 }
 
-// This is required so that `CreationError` can implement `Error`.
+// Ceci est nécessaire pour que `CreationError` puisse implémenter `Error`.
 impl fmt::Display for CreationError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let description = match *self {
-            CreationError::Negative => "number is negative",
-            CreationError::Zero => "number is zero",
+            CreationError::Negative => "le nombre est négatif",
+            CreationError::Zero => "le nombre est zéro",
         };
         f.write_str(description)
     }
@@ -46,8 +46,8 @@ impl PositiveNonzeroInteger {
     }
 }
 
-// TODO: Add the correct return type `Result<(), Box<dyn ???>>`. What can we
-// use to describe both errors? Is there a trait which both errors implement?
+// TODO: Ajoute le type de retour correct `Result<(), Box<dyn ???>>`. Que pouvons-nous
+// utiliser pour décrire les deux erreurs ? Y a-t-il un trait que les deux erreurs implémentent ?
 fn main() {
     let pretend_user_input = "42";
     let x: i64 = pretend_user_input.parse()?;
