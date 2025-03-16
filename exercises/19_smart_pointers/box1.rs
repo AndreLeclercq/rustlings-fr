@@ -1,35 +1,36 @@
-// At compile time, Rust needs to know how much space a type takes up. This
-// becomes problematic for recursive types, where a value can have as part of
-// itself another value of the same type. To get around the issue, we can use a
-// `Box` - a smart pointer used to store data on the heap, which also allows us
-// to wrap a recursive type.
+// Lors de la compilation, Rust doit connaître l'espace occupé par un type. Cela
+// devient problématique pour les types récursifs, où une valeur peut contenir
+// une autre valeur du même type. Pour contourner ce problème, on peut utiliser
+// un `Box` - un pointeur intelligent utilisé pour stocker des données sur le tas (heap),
+// qui nous permet également d'envelopper un type récursif.
 //
-// The recursive type we're implementing in this exercise is the "cons list", a
-// data structure frequently found in functional programming languages. Each
-// item in a cons list contains two elements: The value of the current item and
-// the next item. The last item is a value called `Nil`.
+// Le type récursif qu'on implémente dans cet exercice est la "liste cons" (cons list),
+// une structure de données fréquemment utilisée dans les langages de programmation 
+// fonctionnelle. Chaque élément d'une liste cons contient deux éléments : 
+// la valeur de l'élément courant et l'élément suivant. Le dernier élément 
+// est une valeur appelée `Nil`.
 
-// TODO: Use a `Box` in the enum definition to make the code compile.
+// TODO: Utilise un `Box` dans la définition de l'enum pour faire compiler le code.
 #[derive(PartialEq, Debug)]
 enum List {
-    Cons(i32, List),
+    Cons(i32, Box<List>),
     Nil,
 }
 
-// TODO: Create an empty cons list.
+// TODO: Crée une liste cons vide.
 fn create_empty_list() -> List {
-    todo!()
+    List::Nil
 }
 
-// TODO: Create a non-empty cons list.
+// TODO: Crée une liste cons non vide.
 fn create_non_empty_list() -> List {
-    todo!()
+    List::Cons(1, Box::new(List::Nil))
 }
 
 fn main() {
-    println!("This is an empty cons list: {:?}", create_empty_list());
+    println!("Voici une liste cons vide : {:?}", create_empty_list());
     println!(
-        "This is a non-empty cons list: {:?}",
+        "Voici une liste cons non vide : {:?}",
         create_non_empty_list(),
     );
 }

@@ -1,39 +1,39 @@
-// In this exercise, we are given a `Vec` of `u32` called `numbers` with values
-// ranging from 0 to 99. We would like to use this set of numbers within 8
-// different threads simultaneously. Each thread is going to get the sum of
-// every eighth value with an offset.
+// Dans cet exercice, on te donne un `Vec` (vecteur) de `u32` appelé `numbers` avec des valeurs
+// allant de 0 à 99. Tu voudrais utiliser cet ensemble de nombres dans 8
+// threads différents simultanément. Chaque thread va calculer la somme
+// de chaque huitième valeur avec un décalage (offset).
 //
-// The first thread (offset 0), will sum 0, 8, 16, …
-// The second thread (offset 1), will sum 1, 9, 17, …
-// The third thread (offset 2), will sum 2, 10, 18, …
+// Le premier thread (décalage 0), va sommer 0, 8, 16, …
+// Le deuxième thread (décalage 1), va sommer 1, 9, 17, …
+// Le troisième thread (décalage 2), va sommer 2, 10, 18, …
 // …
-// The eighth thread (offset 7), will sum 7, 15, 23, …
+// Le huitième thread (décalage 7), va sommer 7, 15, 23, …
 //
-// Each thread should own a reference-counting pointer to the vector of
-// numbers. But `Rc` isn't thread-safe. Therefore, we need to use `Arc`.
+// Chaque thread doit posséder un pointeur de comptage de références vers le vecteur de
+// nombres. Mais `Rc` n'est pas thread-safe (sûr pour les threads). Donc, on a besoin d'utiliser `Arc`.
 //
-// Don't get distracted by how threads are spawned and joined. We will practice
-// that later in the exercises about threads.
+// Ne te laisse pas distraire par la façon dont les threads sont créés et rejoints. 
+// On s'entraînera à cela plus tard dans les exercices sur les threads.
 
-// Don't change the lines below.
+// Ne change pas les lignes ci-dessous.
 #![forbid(unused_imports)]
 use std::{sync::Arc, thread};
 
 fn main() {
     let numbers: Vec<_> = (0..100u32).collect();
 
-    // TODO: Define `shared_numbers` by using `Arc`.
+    // TODO: Définis `shared_numbers` en utilisant `Arc`.
     // let shared_numbers = ???;
 
     let mut join_handles = Vec::new();
 
     for offset in 0..8 {
-        // TODO: Define `child_numbers` using `shared_numbers`.
+        // TODO: Définis `child_numbers` en utilisant `shared_numbers`.
         // let child_numbers = ???;
 
         let handle = thread::spawn(move || {
             let sum: u32 = child_numbers.iter().filter(|&&n| n % 8 == offset).sum();
-            println!("Sum of offset {offset} is {sum}");
+            println!("Somme du décalage {offset} est {sum}");
         });
 
         join_handles.push(handle);
