@@ -631,22 +631,17 @@ name = "generics1"
 dir = "14_generics"
 test = false
 hint = """
-Vectors in Rust make use of generics to create dynamically sized arrays of any
-type.
-If the vector `numbers` has the type `Vec<T>`, then we can only push values of
-type `T` to it. By using `into()` before pushing, we ask the compiler to convert
-`n1` and `n2` to `T`. But the compiler doesn't know what `T` is yet and needs a
-type annotation.
+Les vecteurs (Vectors) en Rust utilisent des génériques pour créer des tableaux de taille dynamique de n'importe quel type. 
+Si le vecteur `numbers` a le type `Vec`, alors nous ne pouvons pousser que des valeurs de type `T`. En utilisant `into()` avant de pousser, nous demandons au compilateur de convertir `n1` et `n2` en `T`. Mais le compilateur ne connaît pas encore `T` et a besoin d'une annotation de type. 
 
-`u8` and `i8` can both be converted to `i16`, `i32` and `i64`. Choose one for
-the generic of the vector."""
+`u8` et `i8` peuvent tous deux être convertis en `i16`, `i32` et `i64`. Choisis un type générique pour le vecteur."""
 
 [[exercises]]
 name = "generics2"
 dir = "14_generics"
 hint = """
-Related section in The Book:
-https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions"""
+Voir le chapitre correspondant dans le rust book:
+https://jimskapt.github.io/rust-book-fr/ch10-01-syntax.html#dans-la-d%C3%A9finition-des-m%C3%A9thodes"""
 
 # TRAITS
 
