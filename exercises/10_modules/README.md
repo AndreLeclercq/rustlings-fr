@@ -1,7 +1,7 @@
 # Modules
 
-In this section we'll give you an introduction to Rust's module system.
+Dans ce chapitre, nous te présenterons le module system (système de modules) de Rust.
 
-## Further information
+## Informations complémentaires
 
-- [The Module System](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
+- [The Module System](https://jimskapt.github.io/rust-book-fr/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
