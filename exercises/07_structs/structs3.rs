@@ -1,5 +1,5 @@
-// Structs contain data, but can also have logic. In this exercise, we have
-// defined the `Package` struct, and we want to test some logic attached to it.
+// Les structs contiennent des données, mais peuvent aussi avoir de la logique. Dans cet exercice, nous avons
+// défini la struct `Package`, et nous voulons tester la logique qui y est attachée.
 
 #[derive(Debug)]
 struct Package {
@@ -11,9 +11,9 @@ struct Package {
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
         if weight_in_grams < 10 {
-            // This isn't how you should handle errors in Rust, but we will
-            // learn about error handling later.
-            panic!("Can't ship a package with weight below 10 grams");
+            // Ce n'est pas comme ça qu'on doit gérer les erreurs en Rust, mais nous
+            // apprendrons la gestion des erreurs plus tard.
+            panic!("Impossible d'expédier un colis avec un poids inférieur à 10 grammes");
         }
 
         Self {
@@ -23,20 +23,20 @@ impl Package {
         }
     }
 
-    // TODO: Add the correct return type to the function signature.
+    // TODO: Ajoute le bon type de retour à la signature de la fonction.
     fn is_international(&self) {
-        // TODO: Read the tests that use this method to find out when a package
-        // is considered international.
+        // TODO: Lis les tests qui utilisent cette méthode pour déterminer quand un colis
+        // est considéré comme international.
     }
 
-    // TODO: Add the correct return type to the function signature.
+    // TODO: Ajoute le bon type de retour à la signature de la fonction.
     fn get_fees(&self, cents_per_gram: u32) {
-        // TODO: Calculate the package's fees.
+        // TODO: Calcule les frais du colis.
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
@@ -46,16 +46,16 @@ mod tests {
     #[test]
     #[should_panic]
     fn fail_creating_weightless_package() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Austria");
+        let sender_country = String::from("Espagne");
+        let recipient_country = String::from("Autriche");
 
         Package::new(sender_country, recipient_country, 5);
     }
 
     #[test]
     fn create_international_package() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Russia");
+        let sender_country = String::from("Espagne");
+        let recipient_country = String::from("France");
 
         let package = Package::new(sender_country, recipient_country, 1200);
 
@@ -74,8 +74,8 @@ mod tests {
 
     #[test]
     fn calculate_transport_fees() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Spain");
+        let sender_country = String::from("Espagne");
+        let recipient_country = String::from("Espagne");
 
         let cents_per_gram = 3;
 
