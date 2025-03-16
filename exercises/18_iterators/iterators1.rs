@@ -1,25 +1,25 @@
-// When performing operations on elements within a collection, iterators are
-// essential. This module helps you get familiar with the structure of using an
-// iterator and how to go through elements within an iterable collection.
+// Lors des opérations sur les éléments d'une collection, les itérateurs (iterators) 
+// sont essentiels. Ce module t'aide à te familiariser avec la structure 
+// d'utilisation d'un itérateur et comment parcourir les éléments d'une collection.
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
 mod tests {
     #[test]
-    fn iterators() {
-        let my_fav_fruits = ["banana", "custard apple", "avocado", "peach", "raspberry"];
+    fn iterateurs() {
+        let mes_fruits_preferes = ["banane", "pomme cannelle", "avocat", "pêche", "framboise"];
 
-        // TODO: Create an iterator over the array.
-        let mut fav_fruits_iterator = todo!();
+        // TODO : Crée un itérateur sur le tableau.
+        let mut iterateur_fruits_preferes = todo!();
 
-        assert_eq!(fav_fruits_iterator.next(), Some(&"banana"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
-        assert_eq!(fav_fruits_iterator.next(), Some(&"avocado"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
-        assert_eq!(fav_fruits_iterator.next(), Some(&"raspberry"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(iterateur_fruits_preferes.next(), Some(&"banane"));
+        assert_eq!(iterateur_fruits_preferes.next(), todo!()); // TODO : Remplace `todo!()`
+        assert_eq!(iterateur_fruits_preferes.next(), Some(&"avocat"));
+        assert_eq!(iterateur_fruits_preferes.next(), todo!()); // TODO : Remplace `todo!()`
+        assert_eq!(iterateur_fruits_preferes.next(), Some(&"framboise"));
+        assert_eq!(iterateur_fruits_preferes.next(), todo!()); // TODO : Remplace `todo!()`
     }
 }

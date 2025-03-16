@@ -1,19 +1,19 @@
 fn factorial(num: u64) -> u64 {
-    // TODO: Complete this function to return the factorial of `num` which is
-    // defined as `1 * 2 * 3 * … * num`.
-    // https://en.wikipedia.org/wiki/Factorial
+    // TODO : Complète cette fonction pour renvoyer la factorielle de `num` 
+    // définie comme `1 * 2 * 3 * … * num`.
+    // https://fr.wikipedia.org/wiki/Factorielle
     //
-    // Do not use:
-    // - early returns (using the `return` keyword explicitly)
-    // Try not to use:
-    // - imperative style loops (for/while)
-    // - additional variables
-    // For an extra challenge, don't use:
-    // - recursion
+    // Ne pas utiliser :
+    // - retours anticipés (en utilisant explicitement le mot-clé `return`)
+    // Essaie de ne pas utiliser :
+    // - boucles impératives (for/while)
+    // - variables supplémentaires
+    // Pour un défi supplémentaire, n'utilise pas :
+    // - récursivité
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
