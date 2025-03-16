@@ -2,11 +2,11 @@ trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
-// TODO: Implement the trait `AppendBar` for a vector of strings.
-// `append_bar` should push the string "Bar" into the vector.
+// TODO: Implémente le trait `AppendBar` pour un vecteur de chaînes de caractères.
+// `append_bar` doit ajouter la chaîne "Bar" dans le vecteur.
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
