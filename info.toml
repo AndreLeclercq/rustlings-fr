@@ -849,61 +849,48 @@ une méthode différente qui pourrait rendre ton code plus compact que l'utilisa
 name = "box1"
 dir = "19_smart_pointers"
 hint = """
-The compiler's message should help: Since we cannot store the value of the
-actual type when working with recursive types, we need to store a reference
-(pointer) to its value.
+Le message du compilateur devrait t'aider : Comme nous ne pouvons pas stocker la valeur du type réel lors du travail avec des types récursifs (recursive types), nous devons stocker une référence (pointeur) vers sa valeur.
 
-We should, therefore, place our `List` inside a `Box`. More details in The Book:
-https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes
+Tu devrais donc placer ta `List` à l'intérieur d'une `Box`. Plus de détails dans Le Livre (The Book) :
+https://jimskapt.github.io/rust-book-fr/ch15-01-box.html#pouvoir-utiliser-des-types-r%C3%A9cursifs-gr%C3%A2ce-aux-boites
 
-Creating an empty list should be fairly straightforward (Hint: Read the tests).
+Créer une liste vide devrait être assez simple (Indice : Lis les tests).
 
-For a non-empty list, keep in mind that we want to use our `Cons` list builder.
-Although the current list is one of integers (`i32`), feel free to change the
-definition and try other types!"""
+Pour une liste non vide, garde à l'esprit que nous voulons utiliser notre constructeur de liste `Cons`. Bien que la liste actuelle soit composée d'entiers (`i32`), n'hésite pas à modifier la définition et essayer d'autres types !"""
 
 [[exercises]]
 name = "rc1"
 dir = "19_smart_pointers"
 hint = """
-This is a straightforward exercise to use the `Rc<T>` type. Each `Planet` has
-ownership of the `Sun`, and uses `Rc::clone()` to increment the reference count
-of the `Sun`.
+Ceci est un exercice simple pour utiliser le type `Rc<T>` (Référence Comptée). Chaque `Planète` possède le `Soleil`, et utilise `Rc::clone()` pour incrémenter le compteur de références du `Soleil`.
 
-After using `drop()` to move the `Planet`s out of scope individually, the
-reference count goes down.
+Après avoir utilisé `drop()` pour faire sortir individuellement les `Planète`s de leur portée, le nombre de références diminue.
 
-In the end, the `Sun` only has one reference again, to itself.
+À la fin, le `Soleil` n'a de nouveau qu'une seule référence, à lui-même.
 
-See more at: https://doc.rust-lang.org/book/ch15-04-rc.html
+Voir plus de détails ici : https://jimskapt.github.io/rust-book-fr/ch15-04-rc.html
 
-Unfortunately, Pluto is no longer considered a planet :("""
+Malheureusement, Pluton n'est plus considérée comme une planète :("""
 
 [[exercises]]
 name = "arc1"
 dir = "19_smart_pointers"
 test = false
 hint = """
-Make `shared_numbers` be an `Arc` from the `numbers` vector. Then, in order
-to avoid creating a copy of `numbers`, you'll need to create `child_numbers`
-inside the loop but still in the main thread.
+Transforme `shared_numbers` en un `Arc` (Compteur de Références Atomiques) à partir du vecteur `numbers`. Ensuite, pour éviter de créer une copie de `numbers`, tu devras créer `child_numbers` à l'intérieur de la boucle, mais toujours dans le thread principal.
 
-`child_numbers` should be a clone of the `Arc` of the numbers instead of a
-thread-local copy of the numbers.
+`child_numbers` devrait être un clone de l'`Arc` des nombres plutôt qu'une copie locale des nombres.
 
-This is a simple exercise if you understand the underlying concepts, but if this
-is too much of a struggle, consider reading through all of Chapter 16 in The
-Book:
-https://doc.rust-lang.org/book/ch16-00-concurrency.html"""
+C'est un exercice simple si tu comprends les concepts sous-jacents, mais si tu trouves cela trop difficile, envisage de lire l'intégralité du Chapitre 16 dans Le rust book :
+https://jimskapt.github.io/rust-book-fr/ch16-00-concurrency.html"""
 
 [[exercises]]
 name = "cow1"
 dir = "19_smart_pointers"
 hint = """
-If `Cow` already owns the data, it doesn't need to clone it when `to_mut()` is
-called.
+Si `Cow` possède déjà les données, elle n'a pas besoin de les cloner lorsque `to_mut()` est appelée.
 
-Check out the documentation of the `Cow` type:
+Consulte la documentation du type `Cow` :
 https://doc.rust-lang.org/std/borrow/enum.Cow.html"""
 
 # THREADS
