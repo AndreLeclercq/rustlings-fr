@@ -1,13 +1,13 @@
-// TODO: Fix the compiler error without taking the macro definition out of this
+// TODO: Corrige l'erreur du compilateur sans sortir la définition de la macro de ce
 // module.
 mod macros {
-    macro_rules! my_macro {
-        () => {
-            println!("Check out my macro!");
-        };
-    }
+   macro_rules! my_macro {
+       () => {
+           println!("Regarde ma macro !");
+       };
+   }
 }
 
 fn main() {
-    my_macro!();
+   my_macro!();
 }

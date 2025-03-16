@@ -1,15 +1,15 @@
-// TODO: Fix the compiler error by adding one or two characters.
+// TODO: Corrige l'erreur du compilateur en ajoutant un ou deux caractères.
 #[rustfmt::skip]
 macro_rules! my_macro {
-    () => {
-        println!("Check out my macro!");
-    }
-    ($val:expr) => {
-        println!("Look at this other macro: {}", $val);
-    }
+   () => {
+       println!("Regarde ma macro !");
+   }
+   ($val:expr) => {
+       println!("Regarde cette autre macro : {}", $val);
+   }
 }
 
 fn main() {
-    my_macro!();
-    my_macro!(7777);
+   my_macro!();
+   my_macro!(7777);
 }
