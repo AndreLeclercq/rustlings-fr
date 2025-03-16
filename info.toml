@@ -900,15 +900,15 @@ name = "threads1"
 dir = "20_threads"
 test = false
 hint = """
-`JoinHandle` is a struct that is returned from a spawned thread:
+`JoinHandle` est une structure (struct) qui est retournée par un thread créé :
 https://doc.rust-lang.org/std/thread/fn.spawn.html
 
-A challenge with multi-threaded applications is that the main thread can
-finish before the spawned threads are done.
-https://doc.rust-lang.org/book/ch16-01-threads.html#waiting-for-all-threads-to-finish-using-join-handles
+Le défi avec les applications multi-threadées (multi-processus) est que le thread principal peut
+se terminer avant que les threads créés ne soient finis.
+https://jimskapt.github.io/rust-book-fr/ch16-01-threads.html#attendre-que-toutes-les-t%C3%A2ches-aient-fini-en-utilisant-join
 
-Use the `JoinHandle`s to wait for each thread to finish and collect their
-results.
+Utilise les `JoinHandle` pour attendre que chaque thread se termine et récupérer leurs
+résultats.
 
 https://doc.rust-lang.org/std/thread/struct.JoinHandle.html"""
 
@@ -917,37 +917,36 @@ name = "threads2"
 dir = "20_threads"
 test = false
 hint = """
-`Arc` is an Atomic Reference Counted pointer that allows safe, shared access
-to **immutable** data. But we want to *change* the number of `jobs_done` so
-we'll need to also use another type that will only allow one thread to mutate
-the data at a time. Take a look at this section of the book:
+`Arc` est un pointeur de Comptage de Références Atomique (Atomic Reference Counted) qui permet un accès sûr et partagé
+à des données **immuables**. Mais nous voulons *modifier* le nombre de `jobs_done`, donc
+nous aurons besoin d'utiliser un autre type qui ne permettra qu'à un seul thread de modifier
+les données à la fois. Jette un œil à cette section du livre :
 https://doc.rust-lang.org/book/ch16-03-shared-state.html#atomic-reference-counting-with-arct
 
-Keep reading if you'd like more hints :)
+Continue ta lecture si tu veux plus d'indices :)
 
-Do you now have an `Arc<Mutex<JobStatus>>` at the beginning of `main`? Like:
+As-tu maintenant un `Arc<Mutex<JobStatus>>` au début de `main` ? Comme :
 ```
 let status = Arc::new(Mutex::new(JobStatus { jobs_done: 0 }));
 ```
 
-Similar to the code in the following example in The Book:
-https://doc.rust-lang.org/book/ch16-03-shared-state.html#sharing-a-mutext-between-multiple-threads"""
+Similaire au code de l'exemple suivant dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch16-03-shared-state.html#partager-un-mutext-entre-plusieurs-t%C3%A2ches"""
 
 [[exercises]]
 name = "threads3"
 dir = "20_threads"
 hint = """
-An alternate way to handle concurrency between threads is to use an `mpsc`
-(multiple producer, single consumer) channel to communicate.
+Une autre façon de gérer la concurrence entre threads est d'utiliser un canal `mpsc`
+(multiple producteurs, un seul consommateur - multiple producer, single consumer).
 
-With both a sending end and a receiving end, it's possible to send values in
-one thread and receive them in another.
+Avec un côté émetteur et un côté récepteur, il est possible d'envoyer des valeurs dans un thread et de les recevoir dans un autre.
 
-Multiple producers are possible by using `clone()` to create a duplicate of the
-original sending end.
+Plusieurs producteurs sont possibles en utilisant `clone()` pour créer un duplicata de l'émetteur
+original.
 
-Related section in The Book:
-https://doc.rust-lang.org/book/ch16-02-message-passing.html"""
+Section correspondante dans le rust book :
+https://jimskapt.github.io/rust-book-fr/ch16-02-message-passing.html"""
 
 # MACROS
 
