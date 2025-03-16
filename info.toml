@@ -457,30 +457,24 @@ name = "modules1"
 dir = "10_modules"
 test = false
 hint = """
-Everything is private in Rust by default. But there's a keyword we can use
-to make something public!"""
+Tout est privé par défaut en Rust. Mais il existe un mot-clé qu'on peut utiliser pour rendre quelque chose public !"""
 
 [[exercises]]
 name = "modules2"
 dir = "10_modules"
 test = false
 hint = """
-The `delicious_snacks` module is trying to present an external interface that
-is different than its internal structure (the `fruits` and `veggies` modules
-and associated constants). Complete the `use` statements to fit the uses in
-`main` and find the one keyword missing for both constants.
+Le module `delicious_snacks` essaie de présenter une interface externe différente de sa structure interne (les modules `fruits` et `veggies` et leurs constantes associées). Complète les déclarations `use` pour correspondre aux utilisations dans `main` et trouve le mot-clé manquant pour les deux constantes.
 
-Learn more in The Book:
-https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use"""
+Pour en savoir plus dans le rust book:
+https://jimskapt.github.io/rust-book-fr/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#r%C3%A9exporter-des-%C3%A9l%C3%A9ments-avec-pub-use"""
 
 [[exercises]]
 name = "modules3"
 dir = "10_modules"
 test = false
 hint = """
-`UNIX_EPOCH` and `SystemTime` are declared in the `std::time` module. Add a
-`use` statement for these two to bring them into scope. You can use nested
-paths to bring these two in using only one line."""
+`UNIX_EPOCH` et `SystemTime` sont déclarés dans le module `std::time`. Ajoute une déclaration `use` pour ces deux éléments afin de les intégrer dans la portée. Tu peux utiliser des chemins imbriqués pour les importer en une seule ligne."""
 
 # HASHMAPS
 
