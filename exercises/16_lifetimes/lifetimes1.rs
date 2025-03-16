@@ -1,9 +1,9 @@
-// The Rust compiler needs to know how to check whether supplied references are
-// valid, so that it can let the programmer know if a reference is at risk of
-// going out of scope before it is used. Remember, references are borrows and do
-// not own their own data. What if their owner goes out of scope?
+// Le compilateur Rust a besoin de savoir comment vérifier si les références fournies sont
+// valides, afin de pouvoir informer le programmeur si une référence risque de
+// sortir de sa portée (scope) avant d'être utilisée. Rappelle-toi, les références sont des emprunts (borrows) et ne
+// possèdent pas leurs propres données. Que se passe-t-il si leur propriétaire (owner) sort de sa portée ?
 
-// TODO: Fix the compiler error by updating the function signature.
+// TODO: Corrige l'erreur du compilateur en mettant à jour la signature de la fonction.
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {
         x
@@ -13,7 +13,7 @@ fn longest(x: &str, y: &str) -> &str {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
