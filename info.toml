@@ -716,28 +716,25 @@ Tu pourrais avoir besoin de ceci :
 name = "lifetimes1"
 dir = "16_lifetimes"
 hint = """
-Let the compiler guide you. Also take a look at The Book if you need help:
-https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"""
+Laisse le compilateur te guider. Jette aussi un coup d'œil au rust book si tu as besoin d'aide :
+https://jimskapt.github.io/rust-book-fr/ch10-03-lifetime-syntax.html"""
 
 [[exercises]]
 name = "lifetimes2"
 dir = "16_lifetimes"
 test = false
 hint = """
-Remember that the generic lifetime `'a` will get the concrete lifetime that is
-equal to the smaller of the lifetimes of `x` and `y`.
+Rappelle-toi que la durée de vie générique (lifetime) `'a` prendra la durée de vie concrète qui est égale à la plus petite des durées de vie de `x` et `y`.
 
-You can take at least two paths to achieve the desired result while keeping the
-inner block:
-1. Move the `string2` declaration to make it live as long as `string1` (how is
-   `result` declared?)
-2. Move `println!` into the inner block"""
+Tu as au moins deux solutions pour résoudre ce problème sans supprimer le bloc interne :
+1. Déplace la déclaration de `string2` pour qu'elle vive aussi longtemps que `string1` (comment `result` est-il déclaré ?)
+2. Déplace le `println!` dans le bloc interne"""
 
 [[exercises]]
 name = "lifetimes3"
 dir = "16_lifetimes"
 test = false
-hint = """Let the compiler guide you :)"""
+hint = """Laisse le compilateur te guider :)"""
 
 # TESTS
 
