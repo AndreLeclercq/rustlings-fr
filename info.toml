@@ -384,26 +384,24 @@ https://jimskapt.github.io/rust-book-fr/ch05-03-method-syntax.html"""
 name = "enums1"
 dir = "08_enums"
 test = false
-hint = "No hints this time ;)"
+hint = "Pas d'indices cette fois-ci ;)"
 
 [[exercises]]
 name = "enums2"
 dir = "08_enums"
 test = false
 hint = """
-You can create enumerations that have different variants with different types
-such as anonymous structs, structs, a single string, tuples, no data, etc."""
+Tu peux créer des énumérations qui ont différentes variantes avec différents types tels que des structs anonymes, des structs, une simple string (chaîne de caractères), des tuples, sans données, etc."""
 
 [[exercises]]
 name = "enums3"
 dir = "08_enums"
 hint = """
-As a first step, define enums to compile the code without errors.
+Commence par définir des énumérations pour compiler le code sans erreurs.
 
-Then, create a match expression in `process()`.
+Ensuite, crée une expression match dans `process()`.
 
-Note that you need to deconstruct some message variants in the match expression
-to get the variant's values."""
+Note que tu dois déconstruire certaines variantes du message dans l'expression match pour obtenir les valeurs de la variante."""
 
 # STRINGS
 
