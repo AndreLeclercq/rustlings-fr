@@ -1,9 +1,9 @@
-// Lifetimes are also needed when structs hold references.
+// Les durées de vie (lifetimes) sont également nécessaires quand les structs contiennent des références.
 
-// TODO: Fix the compiler errors about the struct.
-struct Book {
-    author: &str,
-    title: &str,
+// TODO: Corrige les erreurs du compilateur concernant la struct.
+struct Book<'a> {
+    author: &'a str,
+    title: &'a str,
 }
 
 fn main() {
@@ -12,5 +12,5 @@ fn main() {
         title: "1984",
     };
 
-    println!("{} by {}", book.title, book.author);
+    println!("{} par {}", book.title, book.author);
 }
