@@ -4,12 +4,12 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    // Don't change this function.
+    // Ne change pas cette fonction.
     fn new(width: i32, height: i32) -> Self {
         if width <= 0 || height <= 0 {
-            // Returning a `Result` would be better here. But we want to learn
-            // how to test functions that can panic.
-            panic!("Rectangle width and height must be positive");
+            // Retourner un `Result` serait mieux ici. Mais on veut apprendre
+            // à tester des fonctions qui peuvent paniquer.
+            panic!("La largeur et la hauteur du rectangle doivent être positives");
         }
 
         Rectangle { width, height }
@@ -17,7 +17,7 @@ impl Rectangle {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
@@ -25,25 +25,25 @@ mod tests {
     use super::*;
 
     #[test]
-    fn correct_width_and_height() {
-        // TODO: This test should check if the rectangle has the size that we
-        // pass to its constructor.
+    fn largeur_et_hauteur_correctes() {
+        // TODO : Ce test doit vérifier si le rectangle a la taille que nous
+        // passons à son constructeur.
         let rect = Rectangle::new(10, 20);
-        assert_eq!(todo!(), 10); // Check width
-        assert_eq!(todo!(), 20); // Check height
+        assert_eq!(todo!(), 10); // Vérifie la largeur
+        assert_eq!(todo!(), 20); // Vérifie la hauteur
     }
 
-    // TODO: This test should check if the program panics when we try to create
-    // a rectangle with negative width.
+    // TODO : Ce test doit vérifier si le programme panique quand on essaie de créer
+    // un rectangle avec une largeur négative.
     #[test]
-    fn negative_width() {
+    fn largeur_negative() {
         let _rect = Rectangle::new(-10, 10);
     }
 
-    // TODO: This test should check if the program panics when we try to create
-    // a rectangle with negative height.
+    // TODO : Ce test doit vérifier si le programme panique quand on essaie de créer
+    // un rectangle avec une hauteur négative.
     #[test]
-    fn negative_height() {
+    fn hauteur_negative() {
         let _rect = Rectangle::new(10, -10);
     }
 }
