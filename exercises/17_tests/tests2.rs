@@ -1,11 +1,11 @@
-// Calculates the power of 2 using a bit shift.
-// `1 << n` is equivalent to "2 to the power of n".
+// Calcule la puissance de 2 en utilisant un décalage de bits (bit shift).
+// `1 << n` est équivalent à "2 à la puissance de n".
 fn power_of_2(n: u8) -> u64 {
     1 << n
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
@@ -13,8 +13,8 @@ mod tests {
     use super::*;
 
     #[test]
-    fn you_can_assert_eq() {
-        // TODO: Test the function `power_of_2` with some values.
+    fn tu_peux_verifier_egalite() {
+        // TODO : Teste la fonction `power_of_2` avec quelques valeurs.
         assert_eq!();
         assert_eq!();
         assert_eq!();

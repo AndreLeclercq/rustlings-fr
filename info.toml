@@ -742,34 +742,28 @@ hint = """Laisse le compilateur te guider :)"""
 name = "tests1"
 dir = "17_tests"
 hint = """
-`assert!` is a macro that needs an argument. Depending on the value of the
-argument, `assert!` will do nothing (in which case the test will pass) or
-`assert!` will panic (in which case the test will fail).
+`assert!` est une macro qui nécessite un argument. Selon la valeur de l'argument, `assert!` ne fera rien (auquel cas le test passera) ou `assert!` provoquera une panique (failure) (auquel cas le test échouera).
 
-So try giving different values to `assert!` and see which ones compile, which
-ones pass, and which ones fail :)
+Donc essaie de donner différentes valeurs à `assert!` et regarde lesquelles se compilent, lesquelles passent et lesquelles échouent :)
 
-If you want to check for `false`, you can negate the result of what you're
-checking using `!`, like `assert!(!…)`."""
+Si tu veux vérifier `false`, tu peux inverser le résultat de ce que tu vérifies en utilisant `!`, comme `assert!(!…)`."""
 
 [[exercises]]
 name = "tests2"
 dir = "17_tests"
 hint = """
-`assert_eq!` is a macro that takes two arguments and compares them. Try giving
-it two values that are equal! Try giving it two arguments that are different!
-Try switching which argument comes first and which comes second!"""
+`assert_eq!` est une macro qui prend deux arguments et les compare. Essaie de lui donner deux valeurs identiques ! Essaie de lui donner deux arguments différents ! Essaie d'inverser l'ordre des arguments !"""
 
 [[exercises]]
 name = "tests3"
 dir = "17_tests"
 hint = """
-We expect the method `Rectangle::new` to panic for negative values.
+Nous attendons à ce que la méthode `Rectangle::new` provoque une panique (panic) pour des valeurs négatives.
 
-To handle that, you need to add a special attribute to the test function.
+Pour gérer cela, tu dois ajouter un attribut spécial à la fonction de test.
 
-You can refer to the docs:
-https://doc.rust-lang.org/book/ch11-01-writing-tests.html#checking-for-panics-with-should_panic"""
+Tu peux te référer au rust book :
+https://jimskapt.github.io/rust-book-fr/ch11-01-writing-tests.html#v%C3%A9rifier-le-fonctionnement-des-paniques-avec-should_panic"""
 
 # STANDARD LIBRARY TYPES
 
