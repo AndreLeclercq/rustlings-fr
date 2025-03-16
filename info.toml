@@ -555,55 +555,560 @@ https://doc.rust-lang.org/std/keyword.ref.html"""
 name = "errors1"
 dir = "13_error_handling"
 hint = """
-`Ok` and `Err` are the two variants of `Result`, so what the tests are saying
-is that `generate_nametag_text` should return a `Result` instead of an `Option`.
+`Ok` et `Err` sont les deux variantes de `Result`, donc ce que les tests demandent, 
+c'est que `generate_nametag_text` renvoie un `Result` au lieu d'un `Option`.
 
-To make this change, you'll need to:
-  - update the return type in the function signature to be a `Result<String,
-    String>` that could be the variants `Ok(String)` and `Err(String)`
-  - change the body of the function to return `Ok(…)` where it currently
-    returns `Some(…)`
-  - change the body of the function to return `Err(error message)` where it
-    currently returns `None`"""
+Pour effectuer cette modification, tu devras :
+  - mettre à jour le type de retour dans la signature de la fonction pour qu'il soit un `Result<String, 
+    String>` qui pourrait avoir les variantes `Ok(String)` et `Err(String)`
+  - modifier le corps de la fonction pour renvoyer `Ok(…)` là où il 
+    renvoie actuellement `Some(…)`
+  - modifier le corps de la fonction pour renvoyer `Err(message d'erreur)` là où il
+    renvoie actuellement `None`"""
 
 [[exercises]]
 name = "errors2"
 dir = "13_error_handling"
 hint = """
-One way to handle this is using a `match` statement on
-`item_quantity.parse::<i32>()` where the cases are `Ok(something)` and
+Une façon de gérer cela est d'utiliser une instruction `match` sur
+`item_quantity.parse::<i32>()` où les cas sont `Ok(something)` et
 `Err(something)`.
 
-This pattern is very common in Rust, though, so there's the `?` operator that
-does pretty much what you would make that match statement do for you!
+Ce modèle est très courant en Rust, donc il existe l'opérateur `?` qui
+fait pratiquement ce que tu ferais avec cette instruction match !
 
-Take a look at this section of the "Error Handling" chapter:
-https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator"""
+Jette un œil à cette section du chapitre "Error Handling" (Gestion des erreurs) :
+https://jimskapt.github.io/rust-book-fr/ch09-02-recoverable-errors-with-result.html#un-raccourci-pour-propager-les-erreurs--lop%C3%A9rateur-"""
 
 [[exercises]]
 name = "errors3"
 dir = "13_error_handling"
 test = false
 hint = """
-If other functions can return a `Result`, why shouldn't `main`? It's a fairly
-common convention to return something like `Result<(), ErrorType>` from your
-`main` function.
+Si d'autres fonctions peuvent renvoyer un `Result` (résultat), pourquoi `main` ne le pourrait-il pas ? C'est une convention assez courante de renvoyer quelque chose comme `Result<(), TypeErreur>` depuis ta fonction `main`.
 
-The unit type `()` is there because nothing is really needed in terms of a
-positive result."""
+Le type unitaire `()` est là car rien n'est vraiment nécessaire en termes de résultat positif."""
 
 [[exercises]]
 name = "errors4"
 dir = "13_error_handling"
 hint = """
-`PositiveNonzeroInteger::new` is always creating a new instance and returning
-an `Ok` result. But it should be doing some checking, returning an `Err` if
-those checks fail, and only returning an `Ok` if those checks determine that
-everything is… okay :)"""
+La méthode `PositiveNonzeroInteger::new` crée toujours une nouvelle instance et renvoie un résultat `Ok`. Mais elle devrait effectuer des vérifications, renvoyer un `Err` si ces vérifications échouent, et ne renvoyer un `Ok` que si ces vérifications déterminent que tout est… correct :)"""
 
 [[exercises]]
 name = "errors5"
 dir = "13_error_handling"
 test = false
 hint = """
-There are two different 
+Il existe deux types de `Result` différents produits au sein de la fonction `main`, qui sont propagés à l'aide des opérateurs `?`. Comment déclarer un type de retour pour la fonction `main` qui permette les deux ?
+
+En coulisses, l'opérateur `?` appelle `From::from` sur la valeur d'erreur pour la convertir en un objet de trait boîté (trait object), un `Box<dyn Error>`. Cet objet de trait boîté est polymorphique, et comme toutes les erreurs implémentent le trait `Error`, on peut capturer de nombreuses erreurs différentes dans un seul objet `Box`.
+
+Consulte cette section du Livre :
+https://jimskapt.github.io/rust-book-fr/ch09-02-recoverable-errors-with-result.html#un-raccourci-pour-propager-les-erreurs--lop%C3%A9rateur-
+
+Lis plus sur le boxing des erreurs :
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html
+
+Lis plus sur l'utilisation de l'opérateur `?` avec des erreurs boîtées :
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html"""
+
+[[exercises]]
+name = "errors6"
+dir = "13_error_handling"
+hint = """
+Cet exercice utilise une version complétée de `PositiveNonzeroInteger` des exercices précédents.
+
+Sous la ligne où `TODO` te demande de faire une modification, il y a un exemple d'utilisation de la méthode `map_err()` sur un `Result` pour transformer un type d'erreur en un autre. Essaie d'utiliser quelque chose de similaire sur le `Result` de `parse()`. Tu pourras ensuite utiliser l'opérateur `?` pour un retour anticipé.
+
+Plus d'info sur `map_err()` dans la documentation `std::result` :
+https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err"""
+
+# Generics
+
+[[exercises]]
+name = "generics1"
+dir = "14_generics"
+test = false
+hint = """
+Vectors in Rust make use of generics to create dynamically sized arrays of any
+type.
+If the vector `numbers` has the type `Vec<T>`, then we can only push values of
+type `T` to it. By using `into()` before pushing, we ask the compiler to convert
+`n1` and `n2` to `T`. But the compiler doesn't know what `T` is yet and needs a
+type annotation.
+
+`u8` and `i8` can both be converted to `i16`, `i32` and `i64`. Choose one for
+the generic of the vector."""
+
+[[exercises]]
+name = "generics2"
+dir = "14_generics"
+hint = """
+Related section in The Book:
+https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions"""
+
+# TRAITS
+
+[[exercises]]
+name = "traits1"
+dir = "15_traits"
+hint = """
+More about traits in The Book:
+https://doc.rust-lang.org/book/ch10-02-traits.html
+
+The `+` operator can concatenate a `String` with a `&str`."""
+
+[[exercises]]
+name = "traits2"
+dir = "15_traits"
+hint = """
+Notice how the trait takes ownership of `self` and returns `Self`.
+
+Although the signature of `append_bar` in the trait takes `self` as argument,
+the implementation can take `mut self` instead. This is possible because the
+the value is owned anyway."""
+
+[[exercises]]
+name = "traits3"
+dir = "15_traits"
+hint = """
+Traits can have a default implementation for functions. Data types that
+implement the trait can then use the default version of these functions
+if they choose not to implement the function themselves.
+
+Related section in The Book:
+https://doc.rust-lang.org/book/ch10-02-traits.html#default-implementations"""
+
+[[exercises]]
+name = "traits4"
+dir = "15_traits"
+hint = """
+Instead of using concrete types as parameters you can use traits. Try replacing
+`???` with `impl [what goes here?]`.
+
+Related section in The Book:
+https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters"""
+
+[[exercises]]
+name = "traits5"
+dir = "15_traits"
+hint = """
+To ensure a parameter implements multiple traits use the '+ syntax'. Try
+replacing `???` with 'impl [what goes here?] + [what goes here?]'.
+
+Related section in The Book:
+https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax"""
+
+# QUIZ 3
+
+[[exercises]]
+name = "quiz3"
+dir = "quizzes"
+hint = """
+To find the best solution to this challenge, you need to recall your knowledge
+of traits, specifically "Trait Bound Syntax":
+https://doc.rust-lang.org/book/ch10-02-traits.html#trait-bound-syntax
+
+Here is how to specify a trait bound for an implementation block:
+`impl<T: Trait1 + Trait2 + …> for Foo<T> { … }`
+
+You may need this:
+`use std::fmt::Display;`"""
+
+# LIFETIMES
+
+[[exercises]]
+name = "lifetimes1"
+dir = "16_lifetimes"
+hint = """
+Let the compiler guide you. Also take a look at The Book if you need help:
+https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"""
+
+[[exercises]]
+name = "lifetimes2"
+dir = "16_lifetimes"
+test = false
+hint = """
+Remember that the generic lifetime `'a` will get the concrete lifetime that is
+equal to the smaller of the lifetimes of `x` and `y`.
+
+You can take at least two paths to achieve the desired result while keeping the
+inner block:
+1. Move the `string2` declaration to make it live as long as `string1` (how is
+   `result` declared?)
+2. Move `println!` into the inner block"""
+
+[[exercises]]
+name = "lifetimes3"
+dir = "16_lifetimes"
+test = false
+hint = """Let the compiler guide you :)"""
+
+# TESTS
+
+[[exercises]]
+name = "tests1"
+dir = "17_tests"
+hint = """
+`assert!` is a macro that needs an argument. Depending on the value of the
+argument, `assert!` will do nothing (in which case the test will pass) or
+`assert!` will panic (in which case the test will fail).
+
+So try giving different values to `assert!` and see which ones compile, which
+ones pass, and which ones fail :)
+
+If you want to check for `false`, you can negate the result of what you're
+checking using `!`, like `assert!(!…)`."""
+
+[[exercises]]
+name = "tests2"
+dir = "17_tests"
+hint = """
+`assert_eq!` is a macro that takes two arguments and compares them. Try giving
+it two values that are equal! Try giving it two arguments that are different!
+Try switching which argument comes first and which comes second!"""
+
+[[exercises]]
+name = "tests3"
+dir = "17_tests"
+hint = """
+We expect the method `Rectangle::new` to panic for negative values.
+
+To handle that, you need to add a special attribute to the test function.
+
+You can refer to the docs:
+https://doc.rust-lang.org/book/ch11-01-writing-tests.html#checking-for-panics-with-should_panic"""
+
+# STANDARD LIBRARY TYPES
+
+[[exercises]]
+name = "iterators1"
+dir = "18_iterators"
+hint = """
+An iterator goes through all elements in a collection, but what if we've run
+out of elements? What should we expect here? If you're stuck, take a look at
+https://doc.rust-lang.org/std/iter/trait.Iterator.html"""
+
+[[exercises]]
+name = "iterators2"
+dir = "18_iterators"
+hint = """
+`capitalize_first`:
+
+The variable `first` is a `char`. It needs to be capitalized and added to the
+remaining characters in `chars` in order to return the correct `String`.
+
+The remaining characters in `chars` can be viewed as a string slice using the
+`as_str` method.
+
+The documentation for `char` contains many useful methods.
+https://doc.rust-lang.org/std/primitive.char.html
+
+Use `char::to_uppercase`. It returns an iterator that can be converted to a
+`String`.
+
+`capitalize_words_vector`:
+
+Create an iterator from the slice. Transform the iterated values by applying
+the `capitalize_first` function. Remember to `collect` the iterator.
+
+`capitalize_words_string`:
+
+This is surprisingly similar to the previous solution. `collect` is very
+powerful and very general. Rust just needs to know the desired type."""
+
+[[exercises]]
+name = "iterators3"
+dir = "18_iterators"
+hint = """
+The `divide` function needs to return the correct error when the divisor is 0 or
+when even division is not possible.
+
+The `division_results` variable needs to be collected into a collection type.
+
+The `result_with_list` function needs to return a single `Result` where the
+success case is a vector of integers and the failure case is a `DivisionError`.
+
+The `list_of_results` function needs to return a vector of results.
+
+See https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect for
+how the `FromIterator` trait is used in `collect()`. This trait is REALLY
+powerful! It can make the solution to this exercise much easier."""
+
+[[exercises]]
+name = "iterators4"
+dir = "18_iterators"
+hint = """
+In an imperative language, you might write a `for` loop that updates a mutable
+variable. Or, you might write code utilizing recursion and a match clause. In
+Rust, you can take another functional approach, computing the factorial
+elegantly with ranges and iterators.
+
+Check out the `fold` and `rfold` methods!"""
+
+[[exercises]]
+name = "iterators5"
+dir = "18_iterators"
+hint = """
+The documentation for the `std::iter::Iterator` trait contains numerous methods
+that would be helpful here.
+
+The `collection` variable in `count_collection_iterator` is a slice of
+`HashMap`s. It needs to be converted into an iterator in order to use the
+iterator methods.
+
+The `fold` method can be useful in the `count_collection_iterator` function.
+
+For a further challenge, consult the documentation for `Iterator` to find
+a different method that could make your code more compact than using `fold`."""
+
+# SMART POINTERS
+
+[[exercises]]
+name = "box1"
+dir = "19_smart_pointers"
+hint = """
+The compiler's message should help: Since we cannot store the value of the
+actual type when working with recursive types, we need to store a reference
+(pointer) to its value.
+
+We should, therefore, place our `List` inside a `Box`. More details in The Book:
+https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes
+
+Creating an empty list should be fairly straightforward (Hint: Read the tests).
+
+For a non-empty list, keep in mind that we want to use our `Cons` list builder.
+Although the current list is one of integers (`i32`), feel free to change the
+definition and try other types!"""
+
+[[exercises]]
+name = "rc1"
+dir = "19_smart_pointers"
+hint = """
+This is a straightforward exercise to use the `Rc<T>` type. Each `Planet` has
+ownership of the `Sun`, and uses `Rc::clone()` to increment the reference count
+of the `Sun`.
+
+After using `drop()` to move the `Planet`s out of scope individually, the
+reference count goes down.
+
+In the end, the `Sun` only has one reference again, to itself.
+
+See more at: https://doc.rust-lang.org/book/ch15-04-rc.html
+
+Unfortunately, Pluto is no longer considered a planet :("""
+
+[[exercises]]
+name = "arc1"
+dir = "19_smart_pointers"
+test = false
+hint = """
+Make `shared_numbers` be an `Arc` from the `numbers` vector. Then, in order
+to avoid creating a copy of `numbers`, you'll need to create `child_numbers`
+inside the loop but still in the main thread.
+
+`child_numbers` should be a clone of the `Arc` of the numbers instead of a
+thread-local copy of the numbers.
+
+This is a simple exercise if you understand the underlying concepts, but if this
+is too much of a struggle, consider reading through all of Chapter 16 in The
+Book:
+https://doc.rust-lang.org/book/ch16-00-concurrency.html"""
+
+[[exercises]]
+name = "cow1"
+dir = "19_smart_pointers"
+hint = """
+If `Cow` already owns the data, it doesn't need to clone it when `to_mut()` is
+called.
+
+Check out the documentation of the `Cow` type:
+https://doc.rust-lang.org/std/borrow/enum.Cow.html"""
+
+# THREADS
+
+[[exercises]]
+name = "threads1"
+dir = "20_threads"
+test = false
+hint = """
+`JoinHandle` is a struct that is returned from a spawned thread:
+https://doc.rust-lang.org/std/thread/fn.spawn.html
+
+A challenge with multi-threaded applications is that the main thread can
+finish before the spawned threads are done.
+https://doc.rust-lang.org/book/ch16-01-threads.html#waiting-for-all-threads-to-finish-using-join-handles
+
+Use the `JoinHandle`s to wait for each thread to finish and collect their
+results.
+
+https://doc.rust-lang.org/std/thread/struct.JoinHandle.html"""
+
+[[exercises]]
+name = "threads2"
+dir = "20_threads"
+test = false
+hint = """
+`Arc` is an Atomic Reference Counted pointer that allows safe, shared access
+to **immutable** data. But we want to *change* the number of `jobs_done` so
+we'll need to also use another type that will only allow one thread to mutate
+the data at a time. Take a look at this section of the book:
+https://doc.rust-lang.org/book/ch16-03-shared-state.html#atomic-reference-counting-with-arct
+
+Keep reading if you'd like more hints :)
+
+Do you now have an `Arc<Mutex<JobStatus>>` at the beginning of `main`? Like:
+```
+let status = Arc::new(Mutex::new(JobStatus { jobs_done: 0 }));
+```
+
+Similar to the code in the following example in The Book:
+https://doc.rust-lang.org/book/ch16-03-shared-state.html#sharing-a-mutext-between-multiple-threads"""
+
+[[exercises]]
+name = "threads3"
+dir = "20_threads"
+hint = """
+An alternate way to handle concurrency between threads is to use an `mpsc`
+(multiple producer, single consumer) channel to communicate.
+
+With both a sending end and a receiving end, it's possible to send values in
+one thread and receive them in another.
+
+Multiple producers are possible by using `clone()` to create a duplicate of the
+original sending end.
+
+Related section in The Book:
+https://doc.rust-lang.org/book/ch16-02-message-passing.html"""
+
+# MACROS
+
+[[exercises]]
+name = "macros1"
+dir = "21_macros"
+test = false
+hint = """
+When you call a macro, you need to add something special compared to a regular
+function call."""
+
+[[exercises]]
+name = "macros2"
+dir = "21_macros"
+test = false
+hint = """
+Macros don't quite play by the same rules as the rest of Rust, in terms of
+what's available where.
+
+Unlike other things in Rust, the order of "where you define a macro" versus
+"where you use it" actually matters."""
+
+[[exercises]]
+name = "macros3"
+dir = "21_macros"
+test = false
+hint = """
+In order to use a macro outside of its module, you need to do something
+special to the module to lift the macro out into its parent."""
+
+[[exercises]]
+name = "macros4"
+dir = "21_macros"
+test = false
+hint = """
+You only need to add a single character to make this compile.
+
+The way macros are written, it wants to see something between each "macro arm",
+so it can separate them.
+
+That's all the macro exercises we have in here, but it's barely even scratching
+the surface of what you can do with Rust's macros. For a more thorough
+introduction, you can have a read through 'The Little Book of Rust Macros':
+https://veykril.github.io/tlborm/"""
+
+#  CLIPPY
+
+[[exercises]]
+name = "clippy1"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = """
+Rust stores the highest precision version of some long or infinite precision
+mathematical constants in the Rust standard library:
+https://doc.rust-lang.org/stable/std/f32/consts/index.html
+
+We may be tempted to use our own approximations for certain mathematical
+constants, but clippy recognizes those imprecise mathematical constants as a
+source of potential error.
+
+See the suggestions of the Clippy warning in the compile output and use the
+appropriate replacement constant from `std::f32::consts`."""
+
+[[exercises]]
+name = "clippy2"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = """
+`for` loops over `Option` values are more clearly expressed as an `if-let`
+statement.
+
+Not required to solve this exercise, but if you are interested in when iterating
+over `Option` can be useful, read the following section in the documentation:
+https://doc.rust-lang.org/std/option/#iterating-over-option"""
+
+[[exercises]]
+name = "clippy3"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = "No hints this time!"
+
+# TYPE CONVERSIONS
+
+[[exercises]]
+name = "using_as"
+dir = "23_conversions"
+hint = """
+Use the `as` operator to cast one of the operands in the last line of the
+`average` function into the expected return type."""
+
+[[exercises]]
+name = "from_into"
+dir = "23_conversions"
+hint = """
+Follow the steps provided right before the `From` implementation."""
+
+[[exercises]]
+name = "from_str"
+dir = "23_conversions"
+hint = """
+The implementation of `FromStr` should return an `Ok` with a `Person` object,
+or an `Err` with an error if the string is not valid.
+
+This is almost like the previous `from_into` exercise, but returning errors
+instead of falling back to a default value.
+
+Another hint: You can use the `map_err` method of `Result` with a function or a
+closure to wrap the error from `parse::<u8>`.
+
+Yet another hint: If you would like to propagate errors by using the `?`
+operator in your solution, you might want to look at
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html"""
+
+[[exercises]]
+name = "try_from_into"
+dir = "23_conversions"
+hint = """
+Is there an implementation of `TryFrom` in the standard library that can both do
+the required integer conversion and check the range of the input?
+
+Challenge: Can you make the `TryFrom` implementations generic over many integer
+types?"""
+
+[[exercises]]
+name = "as_ref_mut"
+dir = "23_conversions"
+hint = """
+Add `AsRef<str>` or `AsMut<u32>` as a trait bound to the functions."""
