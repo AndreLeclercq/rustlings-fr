@@ -1,28 +1,28 @@
-// AsRef and AsMut allow for cheap reference-to-reference conversions. Read more
-// about them at https://doc.rust-lang.org/std/convert/trait.AsRef.html and
-// https://doc.rust-lang.org/std/convert/trait.AsMut.html, respectively.
+// AsRef et AsMut permettent des conversions peu coûteuses de référence à référence. En savoir plus
+// sur ces traits à https://doc.rust-lang.org/std/convert/trait.AsRef.html et
+// https://doc.rust-lang.org/std/convert/trait.AsMut.html, respectivement.
 
-// Obtain the number of bytes (not characters) in the given argument
-// (`.len()` returns the number of bytes in a string).
-// TODO: Add the `AsRef` trait appropriately as a trait bound.
+// Obtiens le nombre d'octets (pas de caractères) dans l'argument donné
+// (`.len()` renvoie le nombre d'octets dans une chaîne).
+// TODO: Ajoute le trait `AsRef` de manière appropriée comme contrainte de trait.
 fn byte_counter<T>(arg: T) -> usize {
     arg.as_ref().len()
 }
 
-// Obtain the number of characters (not bytes) in the given argument.
-// TODO: Add the `AsRef` trait appropriately as a trait bound.
+// Obtiens le nombre de caractères (pas d'octets) dans l'argument donné.
+// TODO: Ajoute le trait `AsRef` de manière appropriée comme contrainte de trait.
 fn char_counter<T>(arg: T) -> usize {
     arg.as_ref().chars().count()
 }
 
-// Squares a number using `as_mut()`.
-// TODO: Add the appropriate trait bound.
+// Élève un nombre au carré en utilisant `as_mut()`.
+// TODO: Ajoute la contrainte de trait appropriée.
 fn num_sq<T>(arg: &mut T) {
-    // TODO: Implement the function body.
+    // TODO: Implémente le corps de la fonction.
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu le souhaites.
 }
 
 #[cfg(test)]
