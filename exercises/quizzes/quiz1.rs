@@ -1,22 +1,22 @@
-// This is a quiz for the following sections:
+// Ceci est un quiz pour les sections suivantes:
 // - Variables
-// - Functions
+// - Functions (Fonctions)
 // - If
 //
-// Mary is buying apples. The price of an apple is calculated as follows:
-// - An apple costs 2 rustbucks.
-// - However, if Mary buys more than 40 apples, the price of each apple in the
-// entire order is reduced to only 1 rustbuck!
+// Marie achète des pommes. Le prix d'une pomme est calculé comme suit:
+// - Une pomme coûte 2 rustbucks.
+// - Cependant, si Marie achète plus de 40 pommes, le prix de chaque pomme dans
+// la commande entière est réduit à seulement 1 rustbuck!
 
-// TODO: Write a function that calculates the price of an order of apples given
-// the quantity bought.
+// TODO: Écris une fonction qui calcule le prix d'une commande de pommes en fonction
+// de la quantité achetée.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
-// Don't change the tests!
+// Ne modifie pas les tests!
 #[cfg(test)]
 mod tests {
     use super::*;

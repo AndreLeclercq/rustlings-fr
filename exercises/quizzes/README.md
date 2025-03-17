@@ -1,3 +1,3 @@
-# Quizzes
+# Quiz
 
-After every couple of sections, there will be a quiz in this directory that'll test your knowledge on a bunch of sections at once.
+Après quelques chapitres, tu trouveras un quiz dans ce répertoire pour tester tes connaissances sur plusieurs chapitres à la fois.

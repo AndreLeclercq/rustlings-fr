@@ -1,24 +1,24 @@
-// This quiz tests:
-// - Generics
+// Ce quiz teste:
+// - Generics (Génériques)
 // - Traits
 //
-// An imaginary magical school has a new report card generation system written
-// in Rust! Currently, the system only supports creating report cards where the
-// student's grade is represented numerically (e.g. 1.0 -> 5.5). However, the
-// school also issues alphabetical grades (A+ -> F-) and needs to be able to
-// print both types of report card!
+// Une école magique imaginaire a un nouveau système de génération de bulletin scolaire écrit
+// en Rust! Actuellement, le système ne prend en charge que la création de bulletins où la
+// note de l'élève est représentée numériquement (ex. 1.0 -> 5.5). Cependant, l'école
+// délivre également des notes alphabétiques (A+ -> F-) et doit pouvoir
+// imprimer les deux types de bulletins!
 //
-// Make the necessary code changes in the struct `ReportCard` and the impl
-// block to support alphabetical report cards in addition to numerical ones.
+// Fais les modifications nécessaires dans la structure `ReportCard` et dans le bloc
+// d'implémentation pour prendre en charge les bulletins alphabétiques en plus des numériques.
 
-// TODO: Adjust the struct as described above.
+// TODO: Ajuste la structure comme décrit ci-dessus.
 struct ReportCard {
     grade: f32,
     student_name: String,
     student_age: u8,
 }
 
-// TODO: Adjust the impl block as described above.
+// TODO: Ajuste le bloc d'implémentation comme décrit ci-dessus.
 impl ReportCard {
     fn print(&self) -> String {
         format!(
@@ -29,7 +29,7 @@ impl ReportCard {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
