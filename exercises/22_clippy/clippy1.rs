@@ -1,15 +1,15 @@
-// The Clippy tool is a collection of lints to analyze your code so you can
-// catch common mistakes and improve your Rust code.
+// L'outil Clippy est une collection de lints (analyseurs) pour analyser ton code afin que tu puisses
+// repérer les erreurs courantes et améliorer ton code Rust.
 //
-// For these exercises, the code will fail to compile when there are Clippy
-// warnings. Check Clippy's suggestions from the output to solve the exercise.
+// Pour ces exercices, le code ne compilera pas lorsqu'il y a des avertissements Clippy.
+// Vérifie les suggestions de Clippy dans la sortie pour résoudre l'exercice.
 
 fn main() {
-    // TODO: Fix the Clippy lint in this line.
+    // TODO: Corrige le lint Clippy dans cette ligne.
     let pi = 3.14;
     let radius: f32 = 5.0;
 
     let area = pi * radius.powi(2);
 
-    println!("The area of a circle with radius {radius:.2} is {area:.5}");
+    println!("L'aire d'un cercle de rayon {radius:.2} est {area:.5}");
 }
