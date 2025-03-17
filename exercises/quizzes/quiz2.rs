@@ -1,21 +1,21 @@
-// This is a quiz for the following sections:
-// - Strings
-// - Vecs
-// - Move semantics
+// Ceci est un quiz pour les sections suivantes:
+// - Strings (Chaînes de caractères)
+// - Vecs (Vecteurs)
+// - Move semantics (Sémantique de déplacement)
 // - Modules
-// - Enums
+// - Enums (Énumérations)
 //
-// Let's build a little machine in the form of a function. As input, we're going
-// to give a list of strings and commands. These commands determine what action
-// is going to be applied to the string. It can either be:
-// - Uppercase the string
-// - Trim the string
-// - Append "bar" to the string a specified amount of times
+// Construisons une petite machine sous forme de fonction. En entrée, nous allons
+// donner une liste de chaînes et de commandes. Ces commandes déterminent quelle action
+// sera appliquée à la chaîne. Ce peut être:
+// - Mettre la chaîne en majuscules
+// - Supprimer les espaces en début et fin de chaîne
+// - Ajouter "bar" à la chaîne un nombre spécifié de fois
 //
-// The exact form of this will be:
-// - The input is going to be a Vector of 2-length tuples,
-//   the first element is the string, the second one is the command.
-// - The output element is going to be a vector of strings.
+// La forme exacte sera:
+// - L'entrée sera un Vecteur de tuples de longueur 2,
+//   le premier élément est la chaîne, le second est la commande.
+// - L'élément de sortie sera un vecteur de chaînes.
 
 enum Command {
     Uppercase,
@@ -26,17 +26,17 @@ enum Command {
 mod my_module {
     use super::Command;
 
-    // TODO: Complete the function as described above.
+    // TODO: Complète la fonction comme décrit ci-dessus.
     // pub fn transformer(input: ???) -> ??? { ??? }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Tu peux expérimenter ici si tu veux.
 }
 
 #[cfg(test)]
 mod tests {
-    // TODO: What do we need to import to have `transformer` in scope?
+    // TODO: Que devons-nous importer pour avoir `transformer` dans la portée?
     // use ???;
     use super::Command;
 
