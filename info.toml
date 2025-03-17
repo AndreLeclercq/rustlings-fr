@@ -1024,44 +1024,37 @@ hint = "Pas d'indices cette fois !"
 name = "using_as"
 dir = "23_conversions"
 hint = """
-Use the `as` operator to cast one of the operands in the last line of the
-`average` function into the expected return type."""
+Utilise l'opérateur `as` pour convertir l'un des opérandes dans la dernière ligne de la fonction `average` vers le type de retour attendu."""
 
 [[exercises]]
 name = "from_into"
 dir = "23_conversions"
 hint = """
-Follow the steps provided right before the `From` implementation."""
+Suis les étapes juste avant l'implémentation de `From`."""
 
 [[exercises]]
 name = "from_str"
 dir = "23_conversions"
 hint = """
-The implementation of `FromStr` should return an `Ok` with a `Person` object,
-or an `Err` with an error if the string is not valid.
+L'implémentation de `FromStr` doit retourner un `Ok` avec un objet `Person`, ou un `Err` avec une erreur si la chaîne n'est pas valide.
 
-This is almost like the previous `from_into` exercise, but returning errors
-instead of falling back to a default value.
+C'est presque comme l'exercice précédent `from_into`, mais en retournant des erreurs au lieu de revenir à une valeur par défaut.
 
-Another hint: You can use the `map_err` method of `Result` with a function or a
-closure to wrap the error from `parse::<u8>`.
+Un autre indice : Tu peux utiliser la méthode `map_err` de `Result` avec une fonction ou une closure pour encapsuler l'erreur de `parse::<u8>`.
 
-Yet another hint: If you would like to propagate errors by using the `?`
-operator in your solution, you might want to look at
+Encore un indice : Si tu souhaites propager les erreurs en utilisant l'opérateur `?` dans ta solution, tu pourrais consulter
 https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html"""
 
 [[exercises]]
 name = "try_from_into"
 dir = "23_conversions"
 hint = """
-Is there an implementation of `TryFrom` in the standard library that can both do
-the required integer conversion and check the range of the input?
+Y a-t-il une implémentation de `TryFrom` dans la bibliothèque standard qui peut à la fois effectuer la conversion d'entier requise et vérifier la plage d'entrée ?
 
-Challenge: Can you make the `TryFrom` implementations generic over many integer
-types?"""
+Défi : Peux-tu rendre les implémentations de `TryFrom` génériques pour plusieurs types d'entiers ?"""
 
 [[exercises]]
 name = "as_ref_mut"
 dir = "23_conversions"
 hint = """
-Add `AsRef<str>` or `AsMut<u32>` as a trait bound to the functions."""
+Ajoute `AsRef<str>` ou `AsMut<u32>` comme contrainte de trait aux fonctions."""
