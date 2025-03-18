@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 trait Licensed {
     fn licensing_info(&self) -> String {
         "Licence par défaut".to_string()

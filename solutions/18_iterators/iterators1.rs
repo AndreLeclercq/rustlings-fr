@@ -1,4 +1,4 @@
-// Lors de l'exécution d'opérations sur des éléments au sein d'une collection, les itérateurs (iterators) 
+// Lors de l'exécution d'opérations sur des éléments au sein d'une collection, les itérateurs (iterators)
 // sont essentiels. Ce module t'aide à te familiariser avec la structure de l'utilisation d'un
 // itérateur et comment parcourir les éléments d'une collection itérable.
 

@@ -2,5 +2,5 @@
 const NUMBER: u64 = 3;
 
 fn main() {
-   println!("Nombre : {NUMBER}");
+    println!("Nombre : {NUMBER}");
 }

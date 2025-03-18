@@ -1,12 +1,16 @@
 // Le compilateur Rust a besoin de savoir comment vérifier si les références fournies sont
 // valides, afin de pouvoir informer le programmeur si une référence risque de
-// sortir de son scope (portée) avant d'être utilisée. Rappelle-toi, les références sont 
-// des emprunts (borrows) et ne possèdent pas leurs propres données. Que se passe-t-il 
+// sortir de son scope (portée) avant d'être utilisée. Rappelle-toi, les références sont
+// des emprunts (borrows) et ne possèdent pas leurs propres données. Que se passe-t-il
 // si leur propriétaire (owner) sort de son scope ?
 
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     //    ^^^^     ^^          ^^          ^^
-    if x.len() > y.len() { x } else { y }
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
 
 fn main() {

@@ -1,7 +1,7 @@
-// Définissons un modèle simple pour suivre la progression des exercices de Rustlings. 
-// La progression sera modélisée à l'aide d'une map de hachage (hash map). Le nom de l'exercice 
-// est la clé et la progression est la valeur. Deux fonctions de comptage ont été créées pour 
-// compter le nombre d'exercices avec une progression donnée. Recrée cette fonctionnalité 
+// Définissons un modèle simple pour suivre la progression des exercices de Rustlings.
+// La progression sera modélisée à l'aide d'une map de hachage (hash map). Le nom de l'exercice
+// est la clé et la progression est la valeur. Deux fonctions de comptage ont été créées pour
+// compter le nombre d'exercices avec une progression donnée. Recrée cette fonctionnalité
 // de comptage en utilisant des itérateurs. Essaie de ne pas utiliser de boucles impératives (for/while).
 
 use std::collections::HashMap;
@@ -47,9 +47,9 @@ fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Pr
         .sum()
 }
 
-// Équivalent à `count_collection_iterator` et `count_iterator`, en itérant 
-// comme si la collection était un conteneur unique au lieu d'un conteneur 
-// de conteneurs (et plus précisément, un itérateur unique au lieu d'un 
+// Équivalent à `count_collection_iterator` et `count_iterator`, en itérant
+// comme si la collection était un conteneur unique au lieu d'un conteneur
+// de conteneurs (et plus précisément, un itérateur unique au lieu d'un
 // itérateur d'itérateurs).
 fn count_collection_iterator_flat(
     collection: &[HashMap<String, Progress>],

@@ -12,7 +12,7 @@ enum CreationError {
     Zero,
 }
 
-// Un type d'erreur personnalisé que nous utiliserons dans 
+// Un type d'erreur personnalisé que nous utiliserons dans
 // `PositiveNonzeroInteger::parse`.
 #[derive(PartialEq, Debug)]
 enum ParsePosNonzeroError {

@@ -11,37 +11,37 @@
 
 #[derive(PartialEq, Debug)]
 enum List {
-   Cons(i32, Box<List>),
-   Nil,
+    Cons(i32, Box<List>),
+    Nil,
 }
 
 fn create_empty_list() -> List {
-   List::Nil
+    List::Nil
 }
 
 fn create_non_empty_list() -> List {
-   List::Cons(42, Box::new(List::Nil))
+    List::Cons(42, Box::new(List::Nil))
 }
 
 fn main() {
-   println!("Voici une cons list vide: {:?}", create_empty_list());
-   println!(
-       "Voici une cons list non vide: {:?}",
-       create_non_empty_list(),
-   );
+    println!("Voici une cons list vide: {:?}", create_empty_list());
+    println!(
+        "Voici une cons list non vide: {:?}",
+        create_non_empty_list(),
+    );
 }
 
 #[cfg(test)]
 mod tests {
-   use super::*;
+    use super::*;
 
-   #[test]
-   fn test_create_empty_list() {
-       assert_eq!(create_empty_list(), List::Nil);
-   }
+    #[test]
+    fn test_create_empty_list() {
+        assert_eq!(create_empty_list(), List::Nil);
+    }
 
-   #[test]
-   fn test_create_non_empty_list() {
-       assert_ne!(create_empty_list(), create_non_empty_list());
-   }
+    #[test]
+    fn test_create_non_empty_list() {
+        assert_ne!(create_empty_list(), create_non_empty_list());
+    }
 }
