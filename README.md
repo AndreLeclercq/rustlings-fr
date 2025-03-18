@@ -1,11 +1,12 @@
 <div class="oranda-hide">
 
-# Rustlings-FR 🦀❤️
+# Rustlings-FR 🦀 ❤️ 🇫🇷
 
 </div>
 
 > Ceci est la version française du projet [Rustlings 🇬🇧](https://github.com/rust-lang/rustlings). Les exercices ont été traduits pour faciliter l'apprentissage de Rust pour les francophones.
-> ⚠️ Attention : Ce projet est actuellement en cours de traduction et n'est pas encore prêt pour une utilisation quotidienne. Je déconseille vivement de l'utiliser en l'état actuel. ⚠️
+
+> ⚠️ Attention : Ce projet est actuellement en cours de traduction, la première version brut est disponible pour review. Vous pouvez participer en remontant des problèmes de traduction ou de fonctionnement (voir [le guide de contribution](./CONTRIBUTING.md)) ⚠️
 
 Salut et bienvenue dans Rustlings.
 Ce projet contient de petits exercices pour t'habituer à lire et écrire du code Rust.
@@ -144,7 +145,7 @@ Tu peux utiliser le même programme `rustlings` que tu as installé avec `cargo 
 
 - 🇯🇵 [Japanese Rustlings](https://github.com/sotanengel/rustlings-jp) : Une traduction japonaise des exercices Rustlings.
 - 🇨🇳 [Simplified Chinese Rustlings](https://github.com/SandmeyerX/rustlings-zh-cn) : Une traduction chinoise simplifiée des exercices Rustlings.
-- 🇫🇷 [French Rustlings](https://github.com/andreleclercq/rustlings-fr) : Cette traduction française des exercices Rustlings.
+- 🇫🇷 [French Rustlings](https://github.com/andreleclercq/rustlings-fr) : La traduction française des exercices Rustlings.
 
 Tu veux créer ton propre ensemble d'exercices Rustlings pour te concentrer sur un sujet spécifique ?
 Ou tu veux traduire les exercices originaux de Rustlings ?
@@ -167,4 +168,4 @@ cargo uninstall rustlings
 
 Pour contribuer à la version originale en anglais, consulte [CONTRIBUTING.md](https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md) 🔗
 
-Pour le moment aucune contribution n'est acceptée pour la version française. Il me faut du temps pour mettre en place une organisation propre afin de garantir une uniformité dans la traduction.
+Les contributions à la version française sont désormais acceptées ! Si tu souhaites améliorer la traduction, ajouter des explications ou signaler des problèmes, consulte notre [guide de contribution](./CONTRIBUTING.md) qui détaille les différentes façons de participer au projet.
