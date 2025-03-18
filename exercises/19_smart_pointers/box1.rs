@@ -13,18 +13,18 @@
 // TODO: Utilise un `Box` dans la définition de l'enum pour faire compiler le code.
 #[derive(PartialEq, Debug)]
 enum List {
-    Cons(i32, Box<List>),
+    Cons(i32, List),
     Nil,
 }
 
 // TODO: Crée une liste cons vide.
 fn create_empty_list() -> List {
-    List::Nil
+    todo!()
 }
 
 // TODO: Crée une liste cons non vide.
 fn create_non_empty_list() -> List {
-    List::Cons(1, Box::new(List::Nil))
+    todo!()
 }
 
 fn main() {
