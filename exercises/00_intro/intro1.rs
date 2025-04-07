@@ -18,7 +18,7 @@ fn main() {
     println!("de compilation ou de logique. Le concept central de Rustlings est de corriger ces erreurs et");
     println!("de résoudre les exercices. Amuse-toi bien !");
     println!();
-    println!("Le fichier de cet exercice est `exercises/00_intro/intro1.rs`. Jette-y un œil !");
+    println!("Le fichier de cet exercice est `exercises/00_intro/intro1.rs`. Jettes-y un œil !");
     println!("Le chemin de l'exercice actuel sera toujours affiché sous la barre de progression.");
     println!("Tu peux cliquer sur le chemin pour ouvrir le fichier d'exercice dans ton éditeur.");
 }

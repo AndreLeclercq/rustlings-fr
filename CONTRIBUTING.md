@@ -56,6 +56,13 @@ Si tu trouves un problème dans la traduction :
    - `suggestion` - Pour les propositions d'amélioration
    - `bug` - Pour les problèmes techniques liés à la traduction
 
+### Où trouver les traductions ?
+
+- Énoncés :  `exercises/`
+- Solutions : `solutions/`
+- Indices : `info.toml`
+- Quizz : `exercises/quizzes`
+
 ## Distinction importante
 
 ### Pour les problèmes de traduction

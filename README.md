@@ -6,7 +6,7 @@
 
 > Ceci est la version française du projet [Rustlings 🇬🇧](https://github.com/rust-lang/rustlings). Les exercices ont été traduits pour faciliter l'apprentissage de Rust pour les francophones.
 
-> ⚠️ Attention : Ce projet est actuellement en cours de traduction, la première version brut est disponible pour review. **Nous avons aussi créé des [issues](https://github.com/AndreLeclercq/rustlings-fr/issues) dédiées pour chaque chapitre afin de recueillir vos retours d'expérience, essentiels pour valider la qualité du projet avant sa sortie officielle.** ⚠️
+> ⚠️ Attention : Ce projet est actuellement en cours de traduction, la première version brute est disponible pour review. **Nous avons aussi créé des [issues](https://github.com/AndreLeclercq/rustlings-fr/issues) dédiées pour chaque chapitre afin de recueillir vos retours d'expérience, essentiels pour valider la qualité du projet avant sa sortie officielle.** ⚠️
 
 Salut et bienvenue dans Rustlings.
 Ce projet contient de petits exercices pour t'habituer à lire et écrire du code Rust.
