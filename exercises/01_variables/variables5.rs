@@ -4,5 +4,5 @@ fn main() {
 
    // TODO: Corrige l'erreur du compilateur en changeant la ligne ci-dessous sans renommer la variable.
    number = 3;
-   println!("Le nombre plus deux égale: {}", number + 2);
+   println!("Le nombre plus deux égal: {}", number + 2);
 }
