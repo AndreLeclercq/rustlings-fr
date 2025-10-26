@@ -46,15 +46,15 @@ test = false
 hint = """
 Le message du compilateur indique que Rust ne peut pas déduire le type de la variable `x` avec ce qui est actuellement écrit.
 
-Que se passe-t-il si tu annotes la première ligne dans la fonction `main` avec un type?
+Que se passe-t-il si tu annotes la première ligne dans la fonction `main` avec un type ?
 
-Que se passe-t-il si tu donnes une valeur à `x`?
+Que se passe-t-il si tu donnes une valeur à `x` ?
 
-Que se passe-t-il si tu fais les deux?
+Que se passe-t-il si tu fais les deux ?
 
-Quel type devrait avoir `x`, de toute façon?
+Quel type devrait avoir `x`, de toute façon ?
 
-Et si `x` est du même type que `10`? Et s'il est d'un type différent?"""
+Et si `x` est du même type que `10` ? Et s'il est d'un type différent ?"""
 
 [[exercises]]
 name = "variables3"
@@ -79,7 +79,7 @@ name = "variables5"
 dir = "01_variables"
 test = false
 hint = """
-Dans `variables4`, nous avons déjà appris comment rendre une variable immuable mutable en utilisant un mot-clé spécial. Malheureusement, cela ne nous aide pas beaucoup dans cet exercice car nous voulons assigner une valeur de type différent à une variable existante. Parfois, tu peux aussi vouloir réutiliser des noms de variables existants parce que tu convertis simplement des valeurs vers différents types comme dans cet exercice.
+Dans `variables4`, nous avons déjà appris comment rendre une variable immuable mutable en utilisant un mot-clé spécial. Malheureusement, cela ne nous aide pas beaucoup dans cet exercice car nous voulons assigner à une variable existante une valeur de type différent. Parfois, tu peux aussi vouloir réutiliser des noms de variables existants parce que tu convertis simplement des valeurs vers différents types comme dans cet exercice.
 Heureusement, Rust a une solution puissante à ce problème : le 'Shadowing' (masquage) !
 Tu peux en savoir plus sur le 'Masquage' dans la section 'Les variables et la mutabilité' du Rust Book(fr) :
 https://jimskapt.github.io/rust-book-fr/ch03-01-variables-and-mutability.html#le-masquage
