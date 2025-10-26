@@ -62,7 +62,7 @@ git clone https://github.com/andreleclercq/rustlings-fr.git
 Maintenant, va dans le répertoire nouvellement initialisé et lance Rustlings pour obtenir plus d'instructions sur comment commencer les exercices :
 
 ```bash
-cd rustlings/
+cd rustlings-fr/
 rustlings
 ```
 
