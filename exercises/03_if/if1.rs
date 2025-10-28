@@ -7,7 +7,7 @@ fn bigger(a: i32, b: i32) -> i32 {
 }
 
 fn main() {
-   // Tu peux expérimenter du code ici si besoin.
+   // Tu peux faire des tests ici si tu le souhaites.
 }
 
 // Ne te préoccupe pas de ceci pour l'instant :)

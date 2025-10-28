@@ -24,7 +24,7 @@ fn animal_habitat(animal: &str) -> &str {
 }
 
 fn main() {
-    // Tu peux expérimenter ici si tu veux.
+    // Tu peux faire des tests ici si tu le souhaites.
 }
 
 #[cfg(test)]
