@@ -211,8 +211,8 @@ Par exemple, tu peux faire :
 ```
 let array = ["On arrive bientôt ?"; 100];
 ```
-Bonus : quelles autres choses pourrais-tu avoir qui retourneraient `true`
-pour `a.len() >= 100` ?"""
+Bonus : quelles autres choses qui retourneraient `true` pour `a.len() >= 100`
+pourrais-tu avoir ?"""
 
 [[exercises]]
 name = "primitive_types4"
