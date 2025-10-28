@@ -23,7 +23,7 @@ fn animal_habitat(animal: &str) -> &str {
 }
 
 fn main() {
-    // Tu peux expérimenter ici si tu le souhaites.
+    // Tu peux faire des tests ici si tu le souhaites.
 }
 
 // Ne modifie pas les tests !
