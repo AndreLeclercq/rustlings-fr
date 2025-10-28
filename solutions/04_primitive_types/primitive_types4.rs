@@ -1,5 +1,5 @@
 fn main() {
-    // Tu peux expérimenter ici si tu le souhaites.
+    // Tu faire des tests ici, si tu le souhaites.
 }
 
 #[cfg(test)]
