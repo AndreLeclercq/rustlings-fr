@@ -1,4 +1,4 @@
-// Ce magasin fait une promotion, si le prix est un nombre pair, tu obtiens 10
+// Ce magasin fait une promotion : si le prix est un nombre pair, tu obtiens 10
 // Rustbucks de réduction, mais si c'est un nombre impair, c'est 3 Rustbucks de réduction.
 // Ne t'inquiète pas pour le corps des fonctions, nous sommes seulement intéressés par
 // les signatures pour l'instant.
