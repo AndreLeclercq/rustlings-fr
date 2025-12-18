@@ -13,5 +13,5 @@ fn sale_price(price: i64) -> i64 {
 
 fn main() {
     let original_price = 51;
-    println!("Ton prix soldé est {}", sale_price(original_price));
+    println!("Ton prix en promotion est {}", sale_price(original_price));
 }

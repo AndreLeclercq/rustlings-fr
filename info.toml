@@ -136,7 +136,7 @@ test = false
 hint = """
 C'est une erreur très courante qui peut être corrigée en supprimant un seul caractère. 
 Elle se produit parce que Rust fait la distinction entre les expressions et les instructions :
-Les expressions renvoient une valeur basée sur leur(s) opérande(s), tandis que les instructions renvoient simplement 
+les expressions renvoient une valeur basée sur leur(s) opérande(s), tandis que les instructions renvoient simplement 
 un type `()` qui se comporte comme `void` en C/C++.
 Nous voulons renvoyer une valeur de type `i32` de la fonction `square`, mais
 elle renvoie le type `()`.
