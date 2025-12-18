@@ -7,10 +7,10 @@ fn bigger(a: i32, b: i32) -> i32 {
 }
 
 fn main() {
-    // Tu peux expérimenter ici si tu veux.
+   // Tu peux faire des tests ici si tu le souhaites.
 }
 
-// Ne t'occupe pas de ceci pour l'instant :)
+// Ne te préoccupe pas de ceci pour l'instant :)
 #[cfg(test)]
 mod tests {
     use super::*;

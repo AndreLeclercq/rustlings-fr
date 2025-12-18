@@ -8,7 +8,7 @@ fn picky_eater(food: &str) -> &str {
 }
 
 fn main() {
-   // Tu peux expérimenter du code ici si tu le souhaites.
+   // Tu peux faire des tests ici si tu le souhaites.
 }
 
 // TODO: Lis les tests pour comprendre le comportement souhaité.
@@ -19,7 +19,7 @@ mod tests {
 
    #[test]
    fn yummy_food() {
-       // Cela signifie que l'appel de `picky_eater` avec l'argument "food" devrait retourner "Yummy!".
+       // Cela signifie que l'appel de `picky_eater` avec l'argument "fraise" devrait retourner "Miam !".
        assert_eq!(picky_eater("fraise"), "Miam !");
    }
 
@@ -30,8 +30,8 @@ mod tests {
 
    #[test]
    fn default_disliked_food() {
-       assert_eq!(picky_eater("brocoli"), "Non merci!");        
-       assert_eq!(picky_eater("bonbons"), "Non merci!");
-       assert_eq!(picky_eater("n'importe quoi"), "Non merci!");
+       assert_eq!(picky_eater("brocoli"), "Non merci !");        
+       assert_eq!(picky_eater("bonbons"), "Non merci !");
+       assert_eq!(picky_eater("n'importe quoi"), "Non merci !");
    }
 }
