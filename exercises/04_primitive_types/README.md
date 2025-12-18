@@ -1,5 +1,5 @@
 # Types Primitifs
-Rust possède quelques types basiques qui sont directement implémentés dans le 
+Rust possède quelques types basiques qui sont directement implémentés dans le
 compilateur. Dans cette section, nous allons examiner les plus importants.
 
 ## Informations complémentaires
