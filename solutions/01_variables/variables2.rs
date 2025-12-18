@@ -4,8 +4,8 @@ fn main() {
     // comme `i32` qui est le type par défaut pour les entiers.
     let x = 42;
 
-    // Mais nous pouvons imposer un type différent du `i32` par défaut en ajoutant
-    // une annotation de type:
+    // Mais nous pouvons imposer un type différent de `i32` par défaut en ajoutant
+    // une annotation de type :
     // let x: u8 = 42;
 
     if x == 10 {
